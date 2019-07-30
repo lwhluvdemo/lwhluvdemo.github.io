@@ -466,8 +466,8 @@
 <h3 id="关于添加评论插件和设置个性化域名遇到的错误"><a href="#关于添加评论插件和设置个性化域名遇到的错误" class="headerlink" title="关于添加评论插件和设置个性化域名遇到的错误"></a>关于添加评论插件和设置个性化域名遇到的错误</h3><hr>
 <p>要设置个性化域名，为自己的域名做这些设置（为gitalk评论插件做准备）<img src="https://img.vim-cn.com/9c/76a0e975954ba7777552998278f695839ac226.png" alt>，然后从GitHub的博客存储库的设置最下面<code>Custom domain</code>填入自己的域名（我自己的是<code>lwhluvdemo.ml</code>），再在本地博客根目录的<code>source</code>下新建一个无后缀CNAME文件填入自己的个性域名，否则每次<code>hexo g -d</code>都会重置。</p>
 <p>GitHub个人主页Settings-&gt;Developer settings-&gt;OAuth Apps，具体可以参考这个文档的</p>
-<p><a href="https://xaoxuu.com/wiki/material-x/third-party-services/index.html" target="_blank" rel="noopener">Gitalk</a>，获得建立评论区<code>clientID</code>和<code>clientSecret</code>，之后在<code>Homepage URL</code>填自己博客的地址，例如：<a href="https://lwhluvdemo.github.io/">^我的博客</a></p>
-<p>以及<code>Authorization callback URL</code>填写自己的域名地址，例如：<a href="https://lwhluvdemo.ml/" target="_blank" rel="noopener">^我的域名</a></p>
+<p><a href="https://xaoxuu.com/wiki/material-x/third-party-services/index.html" target="_blank" rel="noopener">Gitalk</a>，获得建立评论区<code>clientID</code>和<code>clientSecret</code>，之后在<code>Homepage URL</code>填自己博客的地址，例如我的博客：<a href="https://lwhluvdemo.github.io/">https://lwhluvdemo.github.io/</a></p>
+<p>以及<code>Authorization callback URL</code>填写自己的域名地址，例如我的域名：<a href="https://lwhluvdemo.ml/" target="_blank" rel="noopener">https://lwhluvdemo.ml/</a>.</p>
 <p>两个地址后面都要加 <strong>/</strong>。</p>
 <p><strong>如果前面是按照我的设置来的话，一般不会有hexo配置gitalk 评论后无法初始化创建issue的问题</strong></p>
 <h4 id="解决Error-Validation-Failed错误"><a href="#解决Error-Validation-Failed错误" class="headerlink" title="解决Error: Validation Failed错误"></a>解决Error: Validation Failed错误</h4><p>最后是根目录下<code>_config.yml</code>配置文件的改变，主要是将<code>permalink</code>的title变为id来避免超过50个字符的限制</p>
@@ -491,7 +491,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-07-31T00:01:51+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-07-31T00:26:00+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2019年7月31日</p>
