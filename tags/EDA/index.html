@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>关于 | 水上书呀</title>
+  <title>Tag: EDA | 水上书呀</title>
   
   <meta name="keywords" content="大学生 python 机器学习 交通运输">
   
@@ -60,7 +60,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover page half'>
+    <cover class='cover  half'>
       
         
   <h1 class='title'>Material X</h1>
@@ -123,7 +123,7 @@
 
       
     </cover>
-    <header class="l_header no_sidebar pure">
+    <header class="l_header pure">
   <div id="loading-bar-wrapper">
     <div id="loading-bar" class="pure"></div>
   </div>
@@ -205,6 +205,8 @@
 			<a class="logo flat-box"></a>
 			<ul class='switcher h-list'>
 				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
         
 			</ul>
 		</div>
@@ -290,12 +292,25 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      <div class='l_main no_sidebar'>
-  
-
-  
-    <article id="page" class="post white-box article-type-page" itemscope itemprop="blogPost">
       
+<div class='l_main'>
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
 
 
   <section class='meta'>
@@ -303,169 +318,110 @@
     
     <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/2019/08/15/ck0qvueu60000bwudgj0pk37n/">
+      EDA笔记
+    </a>
+  </h2>
+
+
+      
       <div class='new-meta-box'>
         
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://lwhluvdemo.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>lwhluvdemo</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-08-15</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
       </div>
+      
+        <hr>
       
     </div>
   </section>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          <div class="style-example example">
-<ul class="pure circle center about"><li><img src="https://img.vim-cn.com/ac/b73b23432a3dfc2156205b95eb2ca87a7bf615.jpg"></li></ul>
-<center>[<i class="fab fa-github"></i>][1] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [<i class="fas fa-rss"></i>][2] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [<i class="fab fa-instagram"></i>][3] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [<i class="fas fa-headphones"></i>][4]</center>
-<hr>
-<center>现在是一个大学生，就读于南京农业大学交通运输专业，喜欢码代码，热衷于机器学习方面的探索，虽然现在还不是很强，但会一直坚持下去的，欢迎各位找我一块组队打比赛呀。 <img src="https://img.vim-cn.com/6d/b7f0718a47565854a2af340ffbcd899c96cfea.jpg" height="36px">另外，我还喜欢各种风格的纯音乐，喜欢看番，所以......JOJO天下第一。</center>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>控制大小、改变X轴字段方向</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=(<span class="number">9</span>,<span class="number">6</span>))</span><br><span class="line">plt.xticks(fontsize=<span class="number">12</span>,rotation=<span class="number">45</span>)</span><br></pre></td></tr></table></figure>
 
-
-
-
-</div>
-
-<hr><br>
-:kissing_closed_eyes::stuck_out_tongue::smile::full_moon_with_face:
-
-<p><br><hr><br></p>
-<p>欢迎留言～</p>
-
+<p>改变x轴标签：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">loc, labels = plt.xticks()</span><br><span class="line">loc, labels = loc, [<span class="string">"not know"</span>, <span class="string">"network"</span>, <span class="string">"WiFi"</span>, <span class="string">"cellular"</span>, <span class="string">"2G"</span>, <span class="string">"3G"</span>, <span class="string">"4G"</span>,<span class="string">"no"</span>]</span><br><span class="line">plt.xticks(loc, labels,fontsize=<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+      
+        <div class="readmore">
+          <a href="/2019/08/15/ck0qvueu60000bwudgj0pk37n/" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
         </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
+          <a href="/tags/EDA/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>EDA</a>
         
-      </section>
-    </article>
+          <a href="/tags/机器学习/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>机器学习</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+    
+  </section>
   
-
-  
     
-      
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
     
-      
     
-      
-        <section class='widget grid'>
-  
-<header class='pure'>
-  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
-  
-</header>
-
-  <div class='content pure'>
-    <ul class="grid navgation">
-      
-        <li><a class="flat-box" title="/" href="/"
-          
-          
-          id="home">
-          
-            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
-          
-          近期文章
-        </a></li>
-      
-        <li><a class="flat-box" title="/blog/archives/" href="/blog/archives/"
-          
-            rel="nofollow"
-          
-          
-          id="blogarchives">
-          
-            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
-          
-          文章归档
-        </a></li>
-      
-        <li><a class="flat-box" title="/projects/" href="/projects/"
-          
-          
-          id="projects">
-          
-            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
-          
-          开源项目
-        </a></li>
-      
-        <li><a class="flat-box" title="/friends/" href="/friends/"
-          
-            rel="nofollow"
-          
-          
-          id="friends">
-          
-            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
-          
-          我的友链
-        </a></li>
-      
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
-          
-            rel="nofollow"
-          
-          
-          id="https:xaoxuu.comwikimaterial-x">
-          
-            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
-          
-          主题文档
-        </a></li>
-      
-        <li><a class="flat-box" title="/about/" href="/about/"
-          
-            rel="nofollow"
-          
-          
-          id="about">
-          
-            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
-          
-          关于小站
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-      
-    
-      
-    
-      
-    
-  
-
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  <article class="post white-box comments">
-    <section class="article typo">
-      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
-      
-      
-      
-        <section id="comments">
-          <div id="gitalk-container"></div>
-        </section>
-      
-      
-    </section>
-  </article>
-
 
   
 
 
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-
-
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -854,23 +810,6 @@
 
 
 
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: "cf8ee76fe7fbe61fafc3",
-      clientSecret: "e2278186a9b76574d5a16a2ed44757db11d12482",
-      repo: "lwhluvdemo.github.io",
-      owner: "lwhluvdemo",
-      admin: "lwhluvdemo",
-      
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-      
-      distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-    gitalk.render('gitalk-container');
-  </script>
 
 
 
