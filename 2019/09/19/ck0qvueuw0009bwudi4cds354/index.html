@@ -437,6 +437,51 @@
 <li>时间复杂度 : $O(n + m)$。</li>
 <li>空间复杂度 : $O(1)$。</li>
 </ul>
+<h2 id="125-验证回文串"><a href="#125-验证回文串" class="headerlink" title="125. 验证回文串"></a>125. <a href="https://leetcode-cn.com/problems/valid-palindrome/" target="_blank" rel="noopener">验证回文串</a></h2><p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。</p>
+<p><strong>说明：</strong>本题中，我们将空字符串定义为有效的回文串。</p>
+<p><strong>示例 :</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"A man, a plan, a canal: Panama"</span></span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h4><p><strong>思路：</strong></p>
+<ul>
+<li>设置一个头指针和一个尾指针</li>
+<li>头指针从头开始找，找到第一个数字或字符</li>
+<li>尾指针从尾开始找，找到最后一个数字或字符</li>
+<li>比较两者是否相同，不同就return False</li>
+<li>相同则两指针往中间靠</li>
+<li>当 i &gt; j 的时候，return True</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, s: str)</span> -&gt; bool:</span></span><br><span class="line">        i, j = <span class="number">0</span>, len(s) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; j:</span><br><span class="line">            <span class="comment"># isalnum() 方法检测字符串是否由字母和数字组成</span></span><br><span class="line">            <span class="keyword">while</span> i &lt; len(s) <span class="keyword">and</span> <span class="keyword">not</span> s[i].isalnum():</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> j &gt; <span class="number">-1</span> <span class="keyword">and</span> <span class="keyword">not</span> s[j].isalnum():</span><br><span class="line">                j -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> i &gt; j:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">if</span> s[i].upper() != s[j].upper():</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                j -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度 <strong>O(N)</strong>, 遍历一遍数组。</li>
+<li>空间复杂读 <strong>O(1)</strong>，只使用了常量的空间。</li>
+</ul>
+<p>同思想另一种写法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, s: str)</span> -&gt; bool:</span></span><br><span class="line">       l = <span class="number">0</span></span><br><span class="line">       r = len(s)<span class="number">-1</span></span><br><span class="line">       <span class="keyword">while</span> l &lt; r:</span><br><span class="line">           <span class="keyword">if</span> s[l].isalnum() <span class="keyword">and</span> s[r].isalnum():</span><br><span class="line">               <span class="keyword">if</span> s[l].upper() == s[r].upper():</span><br><span class="line">                   l += <span class="number">1</span></span><br><span class="line">                   r -= <span class="number">1</span></span><br><span class="line">               <span class="keyword">else</span>:</span><br><span class="line">                   <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">           <span class="keyword">else</span>:</span><br><span class="line">               <span class="keyword">if</span> <span class="keyword">not</span> s[l].isalnum():</span><br><span class="line">                   l += <span class="number">1</span></span><br><span class="line">               <span class="keyword">if</span> <span class="keyword">not</span> s[r].isalnum():</span><br><span class="line">                   r -= <span class="number">1</span></span><br><span class="line">       <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<p>其他解法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, s: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="string">""</span>.join(filter(str.isalnum, s)).lower()[::<span class="number">-1</span>]) == (<span class="string">""</span>.join(filter(str.isalnum, s)).lower())</span><br><span class="line"><span class="comment">########分开写</span></span><br><span class="line">s = <span class="string">""</span>.join(filter(str.isalnum, s)).lower()</span><br><span class="line"><span class="keyword">return</span> s[::<span class="number">-1</span>] == s</span><br></pre></td></tr></table></figure>
+
+<h2 id="141-环形链表"><a href="#141-环形链表" class="headerlink" title="141. 环形链表"></a>141. <a href="https://leetcode-cn.com/problems/linked-list-cycle/" target="_blank" rel="noopener">环形链表</a></h2><p>给定一个链表，判断链表中是否有环。</p>
+<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [<span class="number">3</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">-4</span>], pos = <span class="number">1</span></span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
+
+<h4 id="解法一："><a href="#解法一：" class="headerlink" title="解法一："></a>解法一：</h4><ul>
+<li>设两指针fast slow指向链表头部head，迭代：<ul>
+<li>fast每轮走两步，slow每轮走一步，这样两指针每轮后距离+1;</li>
+<li>若链表中存在环，fast和slow一定会在将来相遇（距离连续+1，没有跳跃）；</li>
+</ul>
+</li>
+<li>若fast走到了链表尾部，则说明链表无环。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        fast, slow = head, head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">            <span class="keyword">if</span> fast == slow: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="解法二："><a href="#解法二：" class="headerlink" title="解法二："></a>解法二：</h4><p>通过检查一个结点此前是否被访问过来判断链表是否为环形链表。常用的方法是使用哈希表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        save = set()</span><br><span class="line">        cur = head </span><br><span class="line">        <span class="keyword">while</span> cur <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">if</span> cur <span class="keyword">in</span> save:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                save.add(cur)</span><br><span class="line">                cur = cur.next</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -448,7 +493,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-20T00:03:04+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-20T17:36:50+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2019年9月20日</p>
@@ -529,6 +574,25 @@
         
         
             <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2019/10/02/ck1xpgjcc0005xoud91k1364r/" rel="prev" title="闲聊">
+                                  
+                                      闲聊
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/工作/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>工作</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
                 
                     <section class="next">
@@ -662,7 +726,7 @@
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#26-删除排序数组中的重复项"><span class="toc-text">26. 删除排序数组中的重复项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解答："><span class="toc-text">解答：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#88-合并两个有序数组"><span class="toc-text">88. 合并两个有序数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解法一：双指针-从前往后"><span class="toc-text">解法一：双指针 / 从前往后</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解法二-双指针-从后往前"><span class="toc-text">解法二 : 双指针 / 从后往前</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#26-删除排序数组中的重复项"><span class="toc-text">26. 删除排序数组中的重复项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解答："><span class="toc-text">解答：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#88-合并两个有序数组"><span class="toc-text">88. 合并两个有序数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解法一：双指针-从前往后"><span class="toc-text">解法一：双指针 / 从前往后</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解法二-双指针-从后往前"><span class="toc-text">解法二 : 双指针 / 从后往前</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#125-验证回文串"><span class="toc-text">125. 验证回文串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解法："><span class="toc-text">解法：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#141-环形链表"><span class="toc-text">141. 环形链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解法一："><span class="toc-text">解法一：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解法二："><span class="toc-text">解法二：</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -787,7 +851,7 @@
 </header>
 
     <div class='content pure'>
-      <a href="/tags/EDA/" style="font-size: 14px; color: #999">EDA</a> <a href="/tags/GitHub-Pages/" style="font-size: 14px; color: #999">GitHub Pages</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/bert/" style="font-size: 14px; color: #999">bert</a> <a href="/tags/keras/" style="font-size: 14px; color: #999">keras</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a> <a href="/tags/pyspark/" style="font-size: 14px; color: #999">pyspark</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数据结构与算法/" style="font-size: 14px; color: #999">数据结构与算法</a> <a href="/tags/机器学习/" style="font-size: 24px; color: #555">机器学习</a> <a href="/tags/算法竞赛/" style="font-size: 14px; color: #999">算法竞赛</a>
+      <a href="/tags/EDA/" style="font-size: 14px; color: #999">EDA</a> <a href="/tags/GitHub-Pages/" style="font-size: 14px; color: #999">GitHub Pages</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/bert/" style="font-size: 14px; color: #999">bert</a> <a href="/tags/keras/" style="font-size: 14px; color: #999">keras</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a> <a href="/tags/pyspark/" style="font-size: 14px; color: #999">pyspark</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/协会新手教程/" style="font-size: 14px; color: #999">协会新手教程</a> <a href="/tags/工作/" style="font-size: 14px; color: #999">工作</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数据结构与算法/" style="font-size: 14px; color: #999">数据结构与算法</a> <a href="/tags/机器学习/" style="font-size: 24px; color: #555">机器学习</a> <a href="/tags/算法竞赛/" style="font-size: 14px; color: #999">算法竞赛</a>
     </div>
   </section>
 
