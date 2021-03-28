@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>新手教程 | 水上书呀</title>
+  <title>算法竞赛一些问题总结 | 水上书呀</title>
   
   <meta name="keywords" content="数据分析 机器学习 交通运输">
   
@@ -308,8 +308,8 @@
         
   
     <h1 class="title">
-      <a href="/2019/10/19/ckmtdx9xa0005ekudtcpqcj44/">
-        新手教程
+      <a href="/2019/08/20/ckmte2n18000wboud7ug1r3np/">
+        算法竞赛一些问题总结
       </a>
     </h1>
   
@@ -338,7 +338,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-10-19</p>
+    <p>2019-08-20</p>
   </a>
 </div>
 
@@ -382,41 +382,24 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <p>就目前而言，python很适合编程零基础同学上手，也非常适合做学术研究和分析。举个简单例子，和matlab，c++等相比，python更加简便轻巧易上手，而且matlab能做的，python都能做，且比其应用更广泛，python免费开源，社区更加活跃等等有点，从来不需要为寻找破解而头痛。另一个是所有的研究都需要生成报告或PPT，文字和优雅的图片哪个更好？看下面例子</p>
-<p><a href="https://www.kaggle.com/kabure/extensive-eda-and-modeling-xgb-hyperopt" target="_blank" rel="noopener">一个优秀的EDA(数据可视化分析)</a>。（电脑打开）</p>
-<p>还有今年的就业形势，即使你不就业选择考研，那么读研真正搞学术研究还是要学多门编程语言，但那时你的进度一定跟不上大众。</p>
-<p><a href="https://mp.weixin.qq.com/s/tuh5iMLgIbcbs5RkYOrtGA" target="_blank" rel="noopener">车企不招车辆工程</a>.</p>
-<blockquote>
-<p>如果人工智能是概念里的一栋房子，那么python就是盖房子的材料，当然别的语言比如c或者java等等也能盖房子，但就像稻草、木材和砖块一样，房子需要在美观、坚固各方面取得平衡。从速度上来说，python并不具有明显优势，但它的优势在于简单、灵活，在人工智能领域用起来就格外方便，也格外适合进行一系列的学术研究。</p>
-</blockquote>
+          <h3 id="L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？"><a href="#L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？" class="headerlink" title="L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？"></a>L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？</h3><ul>
+<li>L1范数是对系数<code>绝对值之和的约束</code>。梯度会比较陡，通过求导可以知道，当某些特征作用不大的时候，会使得对应的系数为0，主要用于稀疏特征的约束，比如one-hot编码。</li>
+<li>L2范数是对系数<code>平方和的约束</code>，从而简化模型。梯度会比较缓，通过求导可以知道，系数很难达到0，因此L2范数不仅能够简化模型，也不会像L1范数一样，迫使模型忽略某些特征，一般来说，如果特征不是很稀疏，可以使用L2。</li>
+<li>L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态分布。从梯度来看，L2正则对数值大的参数惩罚大，对数值小的参数惩罚小，而L1对参数的惩罚恒定。于是L1容易把不太重要的特征的参数“惩罚”到0，从而产生稀疏的解。</li>
+</ul>
 <a id="more"></a>
-<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p>培训先决条件：</p>
+<h3 id="比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？"><a href="#比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？" class="headerlink" title="比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？"></a>比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？</h3><p>​        首先要大致清楚模型能学到什么样的特征。</p>
+<p>​        然后当你做一个特征的时候，你要想清楚为什么这样尝试？为什么你认为这个特征有用，比如，以前的类似比赛用过类似的特征；通过对业务的理解进行推理出来的；通过数据观察(EDA)，发现该特征下，label的表现差异比较大（如果特征是随机数的时候，label理论上差异是最小的），一个具有良好依据的特征解释，是特征有效的根本。</p>
+<p>​        最直接有效的特征验证的方法就是代入模型验证，所以一个合理的验证策略变得极为重要。这里一定要留意的一个问题就是，要正确理解什么是“抖动”，抖动存在很多地方，一个随机种子，不同的列的顺序，行的顺序，线上线下数据集等。你所期望的结果，一般需要考虑以下数据集中自身存在的抖动收益。<br>最后就是比较重要的代码效率问题了。</p>
+<p>​        一个高效率的运行框架和调试方案。会大大加快你的想法的测试。【大约1min 验证一个特征】</p>
+<h3 id="数据探索-林有夕的分享"><a href="#数据探索-林有夕的分享" class="headerlink" title="数据探索-林有夕的分享"></a>数据探索-林有夕的分享</h3><p>数据探索主要通过一些统计指标来分析数据的分布。观察数据和结果的影响。</p>
+<p>例如观察数值特征的分布，均值，最值等，观察类别特征的频率分布等。以及一些交叉分布，比如平均每个用户看过的广告数之类的。</p>
+<p>一般数据探索有如下几个好处：</p>
 <ol>
-<li>抛弃百度，学会谷歌</li>
-<li>直接安装anaconda.</li>
+<li>让你更加了解数据的情况。验证是否符合自己所想的逻辑。</li>
+<li>通过观察特征和标签的分布关系。初步验证该特征是否和标签存在明显的关系。（表现在不同标签下，特征分布差异较大），在一些数据量比较大，模型迭代效率较低的场景下，可以通过该方法初步验证特征是否有意义。</li>
+<li>对于比赛后期，大家关于数据现实意义中有道理的特征和方案都尝试差不多的情况下，数据探索就尤其重要了。因为往往最后的提分点都是一些数据固有的特点，而非业务特点。（比如，通过观察你有可能会发现一些采样错误。一些异常数据点（比如地铁停运、极端天气等影响的label）等等。这些单纯靠猜业务是很难想到的。</li>
 </ol>
-<h3 id="视野拓展："><a href="#视野拓展：" class="headerlink" title="视野拓展："></a>视野拓展：</h3><p><strong><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></strong>：这是广大开发者们的圣地与乐园，GitHub 上除了有各大科技公司的顶级开源项目，也活跃着众多具有业界影响力的开源先锋们，而在去年 11 月，GitHub 的仓库数量已经突破了一个亿。但事实上，除了正儿八经的开源项目，GitHub 上还有许多令人哭笑不得的开源项目，看完以后你会发现，原来 GitHub 还可以这样玩。</p>
-<p><strong><a href="https://stackoverflow.com/" target="_blank" rel="noopener">Stackoverflow</a></strong>：<a href="https://www.techug.com/post/why-programmer-must-use-google-and-stack-overflow.html" target="_blank" rel="noopener">为什么程序员一定要会用Google和Stack Overflow？</a>.</p>
-<p><a href="https://www.zhihu.com/question/27574436" target="_blank" rel="noopener">编程新手如何提高编程能力？</a>.</p>
-<p><a href="https://mp.weixin.qq.com/s/m22RDvVV5wZLcZsZbgP5FA" target="_blank" rel="noopener">为什么程序员在学习编程的时候什么都记不住？</a>.</p>
-<h3 id="基础教程"><a href="#基础教程" class="headerlink" title="基础教程"></a>基础教程</h3><p><a href="https://segmentfault.com/a/1190000017949680#articleHeader0" target="_blank" rel="noopener">vscode教程（基础篇）</a>.</p>
-<p><a href="https://www.jiqizhixin.com/articles/2018-05-30-5" target="_blank" rel="noopener">始于Jupyter Notebooks：一份全面的初学者实用指南</a>,</p>
-<p>这篇文章最后的部分：</p>
-<blockquote>
-<p>这个 GitHub 库包含了一些有趣迷人的 Jupyter Notebooks：<a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks" target="_blank" rel="noopener">https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks</a>，这个链接很详细</p>
-</blockquote>
-<p><a href="https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb" target="_blank" rel="noopener">matplotlib - 2D and 3D plotting in Python</a>.——&gt;一个很酷的可视化教程</p>
-<p><a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">makedown教程</a>.</p>
-<p>正则表达式</p>
-<blockquote>
-<p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017639890281664" target="_blank" rel="noopener">廖雪峰正则表达式教程</a>。</p>
-<p><a href="http://tool.oschina.net/uploads/apidocs/jquery/regexp.html" target="_blank" rel="noopener">正则化教程(字典式)</a>，———&gt;测试地址(<a href="https://tool.lu/regex/" target="_blank" rel="noopener">https://tool.lu/regex/</a>)</p>
-</blockquote>
-<p><a href="https://juejin.im/post/5c05e1bc518825689f1b4948" target="_blank" rel="noopener">Google Colab 免费 GPU 使用教程</a>，（放在培训比较靠后的阶段，）</p>
-<h3 id="深入："><a href="#深入：" class="headerlink" title="深入："></a>深入：</h3><p><a href="https://github.com/microsoft" target="_blank" rel="noopener">microsoft</a>/<a href="https://github.com/microsoft/computerscience" target="_blank" rel="noopener">computerscience</a>：</p>
-<p>微软：针对教师，学生和开发者的免费技术资源，可用于计算机科学课程，研讨会和黑客马拉松。</p>
-<p><a href="https://github.com/iamseancheney/python_for_data_analysis_2nd_chinese_version" target="_blank" rel="noopener">利用Python进行数据分析·第2版</a>，</p>
-<p><a href="https://www.tutorialspoint.com/index.htm" target="_blank" rel="noopener">最大的在线教程库，全部免费</a>.</p>
 
         </div>
         
@@ -428,10 +411,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-26T23:08:42+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-20T00:05:50+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年4月26日</p>
+    <p>最后更新于 2019年9月20日</p>
   </a>
 </div>
 
@@ -440,7 +423,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/协会新手教程/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>协会新手教程</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/机器学习/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>机器学习</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/算法竞赛/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>算法竞赛</p></a></div>
 
 
         
@@ -453,12 +436,10 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://lwhluvdemo.github.io/2019/10/19/ckmtdx9xa0005ekudtcpqcj44/&title=新手教程 | 水上书呀&summary=就目前而言，python很适合编程零基础同学上手，也非常适合做学术研究和分析。举个简单例子，和matlab，c++等相比，python更加简便轻巧易上手，而且matlab能做的，python都能做，且比其应用更广泛，python免费开源，社区更加活跃等等有点，从来不需要为寻找破解而头痛。另一个是所有的研究都需要生成报告或PPT，文字和优雅的图片哪个更好？看下面例子
-一个优秀的EDA(数据可视化分析)。（电脑打开）
-还有今年的就业形势，即使你不就业选择考研，那么读研真正搞学术研究还是要学多门编程语言，但那时你的进度一定跟不上大众。
-车企不招车辆工程.
-
-如果人工智能是概念里的一栋房子，那么python就是盖房子的材料，当然别的语言比如c或者java等等也能盖房子，但就像稻草、木材和砖块一样，房子需要在美观、坚固各方面取得平衡。从速度上来说，python并不具有明显优势，但它的优势在于简单、灵活，在人工智能领域用起来就格外方便，也格外适合进行一系列的学术研究。
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://lwhluvdemo.github.io/2019/08/20/ckmte2n18000wboud7ug1r3np/&title=算法竞赛一些问题总结 | 水上书呀&summary=L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？
+L1范数是对系数绝对值之和的约束。梯度会比较陡，通过求导可以知道，当某些特征作用不大的时候，会使得对应的系数为0，主要用于稀疏特征的约束，比如one-hot编码。
+L2范数是对系数平方和的约束，从而简化模型。梯度会比较缓，通过求导可以知道，系数很难达到0，因此L2范数不仅能够简化模型，也不会像L1范数一样，迫使模型忽略某些特征，一般来说，如果特征不是很稀疏，可以使用L2。
+L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态分布。从梯度来看，L2正则对数值大的参数惩罚大，对数值小的参数惩罚小，而L1对参数的惩罚恒定。于是L1容易把不太重要的特征的参数“惩罚”到0，从而产生稀疏的解。
 "
           
           >
@@ -471,12 +452,10 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lwhluvdemo.github.io/2019/10/19/ckmtdx9xa0005ekudtcpqcj44/&title=新手教程 | 水上书呀&summary=就目前而言，python很适合编程零基础同学上手，也非常适合做学术研究和分析。举个简单例子，和matlab，c++等相比，python更加简便轻巧易上手，而且matlab能做的，python都能做，且比其应用更广泛，python免费开源，社区更加活跃等等有点，从来不需要为寻找破解而头痛。另一个是所有的研究都需要生成报告或PPT，文字和优雅的图片哪个更好？看下面例子
-一个优秀的EDA(数据可视化分析)。（电脑打开）
-还有今年的就业形势，即使你不就业选择考研，那么读研真正搞学术研究还是要学多门编程语言，但那时你的进度一定跟不上大众。
-车企不招车辆工程.
-
-如果人工智能是概念里的一栋房子，那么python就是盖房子的材料，当然别的语言比如c或者java等等也能盖房子，但就像稻草、木材和砖块一样，房子需要在美观、坚固各方面取得平衡。从速度上来说，python并不具有明显优势，但它的优势在于简单、灵活，在人工智能领域用起来就格外方便，也格外适合进行一系列的学术研究。
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lwhluvdemo.github.io/2019/08/20/ckmte2n18000wboud7ug1r3np/&title=算法竞赛一些问题总结 | 水上书呀&summary=L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？
+L1范数是对系数绝对值之和的约束。梯度会比较陡，通过求导可以知道，当某些特征作用不大的时候，会使得对应的系数为0，主要用于稀疏特征的约束，比如one-hot编码。
+L2范数是对系数平方和的约束，从而简化模型。梯度会比较缓，通过求导可以知道，系数很难达到0，因此L2范数不仅能够简化模型，也不会像L1范数一样，迫使模型忽略某些特征，一般来说，如果特征不是很稀疏，可以使用L2。
+L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态分布。从梯度来看，L2正则对数值大的参数惩罚大，对数值小的参数惩罚小，而L1对参数的惩罚恒定。于是L1容易把不太重要的特征的参数“惩罚”到0，从而产生稀疏的解。
 "
           
           >
@@ -489,12 +468,10 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://lwhluvdemo.github.io/2019/10/19/ckmtdx9xa0005ekudtcpqcj44/&title=新手教程 | 水上书呀&summary=就目前而言，python很适合编程零基础同学上手，也非常适合做学术研究和分析。举个简单例子，和matlab，c++等相比，python更加简便轻巧易上手，而且matlab能做的，python都能做，且比其应用更广泛，python免费开源，社区更加活跃等等有点，从来不需要为寻找破解而头痛。另一个是所有的研究都需要生成报告或PPT，文字和优雅的图片哪个更好？看下面例子
-一个优秀的EDA(数据可视化分析)。（电脑打开）
-还有今年的就业形势，即使你不就业选择考研，那么读研真正搞学术研究还是要学多门编程语言，但那时你的进度一定跟不上大众。
-车企不招车辆工程.
-
-如果人工智能是概念里的一栋房子，那么python就是盖房子的材料，当然别的语言比如c或者java等等也能盖房子，但就像稻草、木材和砖块一样，房子需要在美观、坚固各方面取得平衡。从速度上来说，python并不具有明显优势，但它的优势在于简单、灵活，在人工智能领域用起来就格外方便，也格外适合进行一系列的学术研究。
+          href="http://service.weibo.com/share/share.php?url=https://lwhluvdemo.github.io/2019/08/20/ckmte2n18000wboud7ug1r3np/&title=算法竞赛一些问题总结 | 水上书呀&summary=L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？
+L1范数是对系数绝对值之和的约束。梯度会比较陡，通过求导可以知道，当某些特征作用不大的时候，会使得对应的系数为0，主要用于稀疏特征的约束，比如one-hot编码。
+L2范数是对系数平方和的约束，从而简化模型。梯度会比较缓，通过求导可以知道，系数很难达到0，因此L2范数不仅能够简化模型，也不会像L1范数一样，迫使模型忽略某些特征，一般来说，如果特征不是很稀疏，可以使用L2。
+L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态分布。从梯度来看，L2正则对数值大的参数惩罚大，对数值小的参数惩罚小，而L1对参数的惩罚恒定。于是L1容易把不太重要的特征的参数“惩罚”到0，从而产生稀疏的解。
 "
           
           >
@@ -519,21 +496,40 @@
         
             <div class="prev-next">
                 
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2019/08/22/ckmte2mzg0004boudh7yytw7t/" rel="prev" title="pyspark">
+                                  
+                                      pyspark
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/pyspark/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>pyspark</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/10/02/ckmtdx9xj000aekudw1bxjtck/" rel="prev" title="闲聊">
+                                <a href="/2019/08/15/ckmte2myv0000bouddo3qhgma/" rel="prev" title="EDA笔记">
                                     
-                                        闲聊
+                                        EDA笔记
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/工作/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>工作</a>
+                                    <a class="tag" href="/tags/EDA/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>EDA</a> <a class="tag" href="/tags/机器学习/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>机器学习</a>
                                 </h6>
                             
                         </span>
@@ -576,7 +572,7 @@
 
   <script>
     window.subData = {
-      title: '新手教程',
+      title: '算法竞赛一些问题总结',
       tools: true
     }
   </script>
@@ -656,7 +652,7 @@
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#教程"><span class="toc-text">教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#视野拓展："><span class="toc-text">视野拓展：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础教程"><span class="toc-text">基础教程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深入："><span class="toc-text">深入：</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？"><span class="toc-text">L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？"><span class="toc-text">比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据探索-林有夕的分享"><span class="toc-text">数据探索-林有夕的分享</span></a></li></ol>
     </div>
   </section>
 

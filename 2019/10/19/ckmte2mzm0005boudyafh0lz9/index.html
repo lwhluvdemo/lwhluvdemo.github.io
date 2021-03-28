@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>pandas技巧 | 水上书呀</title>
+  <title>新手教程 | 水上书呀</title>
   
   <meta name="keywords" content="数据分析 机器学习 交通运输">
   
@@ -308,8 +308,8 @@
         
   
     <h1 class="title">
-      <a href="/2019/09/05/ckmtdx9x50003ekudr3qf25ps/">
-        pandas技巧
+      <a href="/2019/10/19/ckmte2mzm0005boudyafh0lz9/">
+        新手教程
       </a>
     </h1>
   
@@ -338,7 +338,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-09-05</p>
+    <p>2019-10-19</p>
   </a>
 </div>
 
@@ -382,24 +382,41 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <h4 id="用一列的非空值填充另一列对应行的空值"><a href="#用一列的非空值填充另一列对应行的空值" class="headerlink" title="用一列的非空值填充另一列对应行的空值"></a>用一列的非空值填充另一列对应行的空值</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 利用数据框df的name列中的非空值，去填充df的features_1列中对应的NaN。</span></span><br><span class="line">df.loc[df[<span class="string">'features_1'</span>].isnull(),<span class="string">'features_1'</span>]=df[df[<span class="string">'features_1'</span>].isnull()][‘name’]</span><br></pre></td></tr></table></figure>
+          <p>就目前而言，python很适合编程零基础同学上手，也非常适合做学术研究和分析。举个简单例子，和matlab，c++等相比，python更加简便轻巧易上手，而且matlab能做的，python都能做，且比其应用更广泛，python免费开源，社区更加活跃等等有点，从来不需要为寻找破解而头痛。另一个是所有的研究都需要生成报告或PPT，文字和优雅的图片哪个更好？看下面例子</p>
+<p><a href="https://www.kaggle.com/kabure/extensive-eda-and-modeling-xgb-hyperopt" target="_blank" rel="noopener">一个优秀的EDA(数据可视化分析)</a>。（电脑打开）</p>
+<p>还有今年的就业形势，即使你不就业选择考研，那么读研真正搞学术研究还是要学多门编程语言，但那时你的进度一定跟不上大众。</p>
+<p><a href="https://mp.weixin.qq.com/s/tuh5iMLgIbcbs5RkYOrtGA" target="_blank" rel="noopener">车企不招车辆工程</a>.</p>
+<blockquote>
+<p>如果人工智能是概念里的一栋房子，那么python就是盖房子的材料，当然别的语言比如c或者java等等也能盖房子，但就像稻草、木材和砖块一样，房子需要在美观、坚固各方面取得平衡。从速度上来说，python并不具有明显优势，但它的优势在于简单、灵活，在人工智能领域用起来就格外方便，也格外适合进行一系列的学术研究。</p>
+</blockquote>
 <a id="more"></a>
-<h4 id="填充缺失值"><a href="#填充缺失值" class="headerlink" title="填充缺失值"></a>填充缺失值</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#填充缺失值</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> string_feature+other_feature:</span><br><span class="line">    mode_num = data[i].mode()[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">if</span> (mode_num != <span class="number">-1</span>):</span><br><span class="line">        print(i)</span><br><span class="line">        data.loc[data[i] == <span class="number">-1</span>, i] = mode_num</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="number">-1</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> numeric_feature:</span><br><span class="line">    mean_num = data[i].mean()</span><br><span class="line">    <span class="keyword">if</span> (mean_num != <span class="number">-1</span>):</span><br><span class="line">        print(i)</span><br><span class="line">        data.loc[data[i] == <span class="number">-1</span>, i] = mean_num</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
-<p>判断两个list是否是父子集关系</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">c = [<span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">set(b) &gt; set(a)</span><br><span class="line">set(b) &gt; set(c)</span><br></pre></td></tr></table></figure>
-<p>求列表差值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list(set(a).difference(set(b)))</span><br></pre></td></tr></table></figure>
-<p>按列时间值筛选 Pandas DataFrame</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> io</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">t=<span class="string">"""2015-01-01 04:00:00</span></span><br><span class="line"><span class="string">2015-01-01 05:00:00</span></span><br><span class="line"><span class="string">2015-01-01 06:00:00</span></span><br><span class="line"><span class="string">2015-01-01 07:00:00</span></span><br><span class="line"><span class="string">2015-01-02 04:00:00</span></span><br><span class="line"><span class="string">2015-01-02 05:00:00</span></span><br><span class="line"><span class="string">2015-01-02 06:00:00</span></span><br><span class="line"><span class="string">2015-01-02 07:00:00"""</span></span><br><span class="line">s = pd.read_csv(io.StringIO(t), parse_dates=[<span class="number">0</span>], header=<span class="literal">None</span>, names=[<span class="string">'date'</span>])</span><br><span class="line">s[(s[<span class="string">'date'</span>].dt.hour &lt;= <span class="number">6</span>)&amp;(s[<span class="string">'date'</span>].dt.hour &gt;= <span class="number">2</span>)]</span><br></pre></td></tr></table></figure>
-<p>计算真值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.count_nonzero(df[col].value_counts().reset_index()[col].values&gt;=<span class="number">600</span>)</span><br></pre></td></tr></table></figure>
-<p>每列的最大值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train_df.ix[train_df.idxmax()].iloc[:,<span class="number">60</span>:<span class="number">120</span>].max()</span><br></pre></td></tr></table></figure>
-<p> 同类特征正则匹配：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 同类特征正则匹配测试</span></span><br><span class="line">df = pd.DataFrame(np.array(([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">8</span>,<span class="number">8</span>,<span class="number">8</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">7</span>,<span class="number">7</span>])),</span><br><span class="line">                  index=[<span class="string">'mouse'</span>, <span class="string">'rabbit'</span>],</span><br><span class="line">                  columns=[<span class="string">'WebInfo_1'</span>, <span class="string">'WebInfo_2'</span>, <span class="string">'WebInfo_3'</span>,<span class="string">'ProductInfo_1'</span>,</span><br><span class="line">                  <span class="string">'ProductInfo_2'</span>,<span class="string">'ProductInfo_3'</span>,<span class="string">'ProductInfo_4'</span>,<span class="string">'UserInfo_1'</span>,</span><br><span class="line">                  <span class="string">'UserInfo_2'</span>,<span class="string">'UserInfo_3'</span>])</span><br><span class="line">df_WebInfo = df.filter(regex=<span class="string">"WebInfo_\d&#123;1,3&#125;"</span>)</span><br><span class="line">df_ProductInfo = df.filter(regex=<span class="string">"ProductInfo_\d&#123;1,3&#125;"</span>)</span><br><span class="line">df_UserInfo = df.filter(regex=<span class="string">"UserInfo_\d&#123;1,3&#125;"</span>)</span><br></pre></td></tr></table></figure>
-<p>将一列的值填充到另一列同行的缺失值中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">train.loc[train[<span class="string">'member_id'</span>].isnull(),<span class="string">'member_id'</span>] = train[train[<span class="string">'member_id'</span>]</span><br><span class="line">                                                          .isnull()][<span class="string">'customer_id'</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p>培训先决条件：</p>
+<ol>
+<li>抛弃百度，学会谷歌</li>
+<li>直接安装anaconda.</li>
+</ol>
+<h3 id="视野拓展："><a href="#视野拓展：" class="headerlink" title="视野拓展："></a>视野拓展：</h3><p><strong><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></strong>：这是广大开发者们的圣地与乐园，GitHub 上除了有各大科技公司的顶级开源项目，也活跃着众多具有业界影响力的开源先锋们，而在去年 11 月，GitHub 的仓库数量已经突破了一个亿。但事实上，除了正儿八经的开源项目，GitHub 上还有许多令人哭笑不得的开源项目，看完以后你会发现，原来 GitHub 还可以这样玩。</p>
+<p><strong><a href="https://stackoverflow.com/" target="_blank" rel="noopener">Stackoverflow</a></strong>：<a href="https://www.techug.com/post/why-programmer-must-use-google-and-stack-overflow.html" target="_blank" rel="noopener">为什么程序员一定要会用Google和Stack Overflow？</a>.</p>
+<p><a href="https://www.zhihu.com/question/27574436" target="_blank" rel="noopener">编程新手如何提高编程能力？</a>.</p>
+<p><a href="https://mp.weixin.qq.com/s/m22RDvVV5wZLcZsZbgP5FA" target="_blank" rel="noopener">为什么程序员在学习编程的时候什么都记不住？</a>.</p>
+<h3 id="基础教程"><a href="#基础教程" class="headerlink" title="基础教程"></a>基础教程</h3><p><a href="https://segmentfault.com/a/1190000017949680#articleHeader0" target="_blank" rel="noopener">vscode教程（基础篇）</a>.</p>
+<p><a href="https://www.jiqizhixin.com/articles/2018-05-30-5" target="_blank" rel="noopener">始于Jupyter Notebooks：一份全面的初学者实用指南</a>,</p>
+<p>这篇文章最后的部分：</p>
+<blockquote>
+<p>这个 GitHub 库包含了一些有趣迷人的 Jupyter Notebooks：<a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks" target="_blank" rel="noopener">https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks</a>，这个链接很详细</p>
+</blockquote>
+<p><a href="https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb" target="_blank" rel="noopener">matplotlib - 2D and 3D plotting in Python</a>.——&gt;一个很酷的可视化教程</p>
+<p><a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">makedown教程</a>.</p>
+<p>正则表达式</p>
+<blockquote>
+<p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017639890281664" target="_blank" rel="noopener">廖雪峰正则表达式教程</a>。</p>
+<p><a href="http://tool.oschina.net/uploads/apidocs/jquery/regexp.html" target="_blank" rel="noopener">正则化教程(字典式)</a>，———&gt;测试地址(<a href="https://tool.lu/regex/" target="_blank" rel="noopener">https://tool.lu/regex/</a>)</p>
+</blockquote>
+<p><a href="https://juejin.im/post/5c05e1bc518825689f1b4948" target="_blank" rel="noopener">Google Colab 免费 GPU 使用教程</a>，（放在培训比较靠后的阶段，）</p>
+<h3 id="深入："><a href="#深入：" class="headerlink" title="深入："></a>深入：</h3><p><a href="https://github.com/microsoft" target="_blank" rel="noopener">microsoft</a>/<a href="https://github.com/microsoft/computerscience" target="_blank" rel="noopener">computerscience</a>：</p>
+<p>微软：针对教师，学生和开发者的免费技术资源，可用于计算机科学课程，研讨会和黑客马拉松。</p>
+<p><a href="https://github.com/iamseancheney/python_for_data_analysis_2nd_chinese_version" target="_blank" rel="noopener">利用Python进行数据分析·第2版</a>，</p>
+<p><a href="https://www.tutorialspoint.com/index.htm" target="_blank" rel="noopener">最大的在线教程库，全部免费</a>.</p>
 
         </div>
         
@@ -411,10 +428,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-20T00:03:44+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-26T23:08:42+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年9月20日</p>
+    <p>最后更新于 2020年4月26日</p>
   </a>
 </div>
 
@@ -423,7 +440,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/机器学习/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>机器学习</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/pandas/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>pandas</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/协会新手教程/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>协会新手教程</p></a></div>
 
 
         
@@ -436,7 +453,13 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://lwhluvdemo.github.io/2019/09/05/ckmtdx9x50003ekudr3qf25ps/&title=pandas技巧 | 水上书呀&summary=用一列的非空值填充另一列对应行的空值12# 利用数据框df的name列中的非空值，去填充df的features_1列中对应的NaN。df.loc[df['features_1'].isnull(),'features_1']=df[df['features_1'].isnull()][‘name’]"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://lwhluvdemo.github.io/2019/10/19/ckmte2mzm0005boudyafh0lz9/&title=新手教程 | 水上书呀&summary=就目前而言，python很适合编程零基础同学上手，也非常适合做学术研究和分析。举个简单例子，和matlab，c++等相比，python更加简便轻巧易上手，而且matlab能做的，python都能做，且比其应用更广泛，python免费开源，社区更加活跃等等有点，从来不需要为寻找破解而头痛。另一个是所有的研究都需要生成报告或PPT，文字和优雅的图片哪个更好？看下面例子
+一个优秀的EDA(数据可视化分析)。（电脑打开）
+还有今年的就业形势，即使你不就业选择考研，那么读研真正搞学术研究还是要学多门编程语言，但那时你的进度一定跟不上大众。
+车企不招车辆工程.
+
+如果人工智能是概念里的一栋房子，那么python就是盖房子的材料，当然别的语言比如c或者java等等也能盖房子，但就像稻草、木材和砖块一样，房子需要在美观、坚固各方面取得平衡。从速度上来说，python并不具有明显优势，但它的优势在于简单、灵活，在人工智能领域用起来就格外方便，也格外适合进行一系列的学术研究。
+"
           
           >
           
@@ -448,7 +471,13 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lwhluvdemo.github.io/2019/09/05/ckmtdx9x50003ekudr3qf25ps/&title=pandas技巧 | 水上书呀&summary=用一列的非空值填充另一列对应行的空值12# 利用数据框df的name列中的非空值，去填充df的features_1列中对应的NaN。df.loc[df['features_1'].isnull(),'features_1']=df[df['features_1'].isnull()][‘name’]"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lwhluvdemo.github.io/2019/10/19/ckmte2mzm0005boudyafh0lz9/&title=新手教程 | 水上书呀&summary=就目前而言，python很适合编程零基础同学上手，也非常适合做学术研究和分析。举个简单例子，和matlab，c++等相比，python更加简便轻巧易上手，而且matlab能做的，python都能做，且比其应用更广泛，python免费开源，社区更加活跃等等有点，从来不需要为寻找破解而头痛。另一个是所有的研究都需要生成报告或PPT，文字和优雅的图片哪个更好？看下面例子
+一个优秀的EDA(数据可视化分析)。（电脑打开）
+还有今年的就业形势，即使你不就业选择考研，那么读研真正搞学术研究还是要学多门编程语言，但那时你的进度一定跟不上大众。
+车企不招车辆工程.
+
+如果人工智能是概念里的一栋房子，那么python就是盖房子的材料，当然别的语言比如c或者java等等也能盖房子，但就像稻草、木材和砖块一样，房子需要在美观、坚固各方面取得平衡。从速度上来说，python并不具有明显优势，但它的优势在于简单、灵活，在人工智能领域用起来就格外方便，也格外适合进行一系列的学术研究。
+"
           
           >
           
@@ -460,7 +489,13 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://lwhluvdemo.github.io/2019/09/05/ckmtdx9x50003ekudr3qf25ps/&title=pandas技巧 | 水上书呀&summary=用一列的非空值填充另一列对应行的空值12# 利用数据框df的name列中的非空值，去填充df的features_1列中对应的NaN。df.loc[df['features_1'].isnull(),'features_1']=df[df['features_1'].isnull()][‘name’]"
+          href="http://service.weibo.com/share/share.php?url=https://lwhluvdemo.github.io/2019/10/19/ckmte2mzm0005boudyafh0lz9/&title=新手教程 | 水上书呀&summary=就目前而言，python很适合编程零基础同学上手，也非常适合做学术研究和分析。举个简单例子，和matlab，c++等相比，python更加简便轻巧易上手，而且matlab能做的，python都能做，且比其应用更广泛，python免费开源，社区更加活跃等等有点，从来不需要为寻找破解而头痛。另一个是所有的研究都需要生成报告或PPT，文字和优雅的图片哪个更好？看下面例子
+一个优秀的EDA(数据可视化分析)。（电脑打开）
+还有今年的就业形势，即使你不就业选择考研，那么读研真正搞学术研究还是要学多门编程语言，但那时你的进度一定跟不上大众。
+车企不招车辆工程.
+
+如果人工智能是概念里的一栋房子，那么python就是盖房子的材料，当然别的语言比如c或者java等等也能盖房子，但就像稻草、木材和砖块一样，房子需要在美观、坚固各方面取得平衡。从速度上来说，python并不具有明显优势，但它的优势在于简单、灵活，在人工智能领域用起来就格外方便，也格外适合进行一系列的学术研究。
+"
           
           >
           
@@ -484,35 +519,21 @@
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/2019/09/12/ckmtdx9xg0007ekud77a1fjjn/" rel="prev" title="">
-                                  
-                                      2019-09-12
-                                  
-                                </a>
-                            </h4>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/08/29/ckmtdx9x10001ekud9p149fie/" rel="prev" title="keras_bert">
+                                <a href="/2019/10/02/ckmte2n1a000xboudnog44jhj/" rel="prev" title="闲聊">
                                     
-                                        keras_bert
+                                        闲聊
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/keras/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>keras</a> <a class="tag" href="/tags/bert/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>bert</a>
+                                    <a class="tag" href="/tags/工作/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>工作</a>
                                 </h6>
                             
                         </span>
@@ -555,7 +576,7 @@
 
   <script>
     window.subData = {
-      title: 'pandas技巧',
+      title: '新手教程',
       tools: true
     }
   </script>
@@ -635,7 +656,7 @@
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#用一列的非空值填充另一列对应行的空值"><span class="toc-text">用一列的非空值填充另一列对应行的空值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#填充缺失值"><span class="toc-text">填充缺失值</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#教程"><span class="toc-text">教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#视野拓展："><span class="toc-text">视野拓展：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础教程"><span class="toc-text">基础教程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深入："><span class="toc-text">深入：</span></a></li></ol></li></ol>
     </div>
   </section>
 
