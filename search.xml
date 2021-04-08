@@ -14,7 +14,9 @@
       
         <tags>
             
-            <tag> -vim -YouCompleteMe </tag>
+            <tag> vim </tag>
+            
+            <tag> YouCompleteMe </tag>
             
         </tags>
       
