@@ -386,15 +386,15 @@
 <a id="more"></a>
 
 <p>前期已经完成的工作说明一下：直接通过xshell在远程服务器上生成密钥</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">'任何随意的名称标记(英文数字等的最好)'</span> -f ~/.ssh/gitee_id_rsa</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">'任何随意的名称标记(英文数字等的最好)'</span> -f ~/.ssh/gitee_id_rsa</span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">'2482988299@qq.com'</span> -f ~/.ssh/gitee_id_rsa</span><br></pre></td></tr></table></figure>
 
 <p>其中<code>-f</code>指示生成密钥的路径和名称，因为我这个密钥是用在gitee上的，所以加了gitee前缀。</p>
 <p>随后在 <code>~/.ssh</code> 目录下新建一个config文件，添加如下内容</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># gitee</span></span><br><span class="line">Host gitee.com</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/gitee_id_rsa</span><br></pre></td></tr></table></figure>
 
 <p>最后用这个命令测试：<code>$ ssh -T git@gitee.com</code>，看到<code>Hi XXX! You&#39;ve successfully authenticated, but GITEE.COM does not provide shell access.</code>即代表成功。</p>
-<p>最后的最后，由于初次在服务器上使用git，你需要告诉它你是谁，在<code>.git\config</code>文件追加以下配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">    name = yourname</span><br><span class="line">    email = xxxxxxx@qq.com</span><br></pre></td></tr></table></figure>
+<p>最后的最后，由于初次在服务器上使用git，你需要告诉它你是谁，直接运行下面的，会生成.gitconfig：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email <span class="string">"2482988299@qq.com"</span></span><br><span class="line">$ git config --global user.name <span class="string">"lwhluvdemo"</span></span><br></pre></td></tr></table></figure>
 
 <p>PS：这是我学习Linux的第5天，所以在远程服务器上像我这么使用密钥是否涉及安全问题暂不清楚，我使用的服务器仅用来学习和练手，不涉及运营！</p>
 
@@ -408,10 +408,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-09T23:56:52+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-09T11:07:11+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2021年4月9日</p>
+    <p>最后更新于 2021年5月9日</p>
   </a>
 </div>
 
