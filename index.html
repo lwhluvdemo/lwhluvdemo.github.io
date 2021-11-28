@@ -1284,10 +1284,10 @@
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
       <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf, SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.sql <span class="keyword">import</span> SparkSession,SQLContext,DataFrame,Row</span><br><span class="line">spark= SparkSession.builder.master(<span class="string">'local'</span>).appName(<span class="string">'test'</span>).getOrCreate()</span><br><span class="line">sc = spark.sparkContext</span><br><span class="line"></span><br><span class="line">lines = sc.textFile(<span class="string">"data.txt"</span>)</span><br></pre></td></tr></table></figure>
-
 <p>相关操作：<a href="https://www.jianshu.com/p/4cd22eda363f" target="_blank" rel="noopener">PySpark之RDD入门</a>.</p>
-<p>测试：<br>$$\text { If } f\left(\mathbf{u}, \mathbf{x}^{<em>}\right) \leq 0 \forall \mathbf{u} \in \mathcal{U}_{\epsilon}, \quad \text { then } \mathbb{P}^{</em>}\left(f\left(\tilde{\mathbf{u}}, \mathbf{x}^{*}\right) \leq 0\right) \geq 1-\epsilon \tag{2}$$.</p>
-<p>测试2：$\text { If } f\left(\mathbf{u}, \mathbf{x}^{<em>}\right) \leq 0 \forall \mathbf{u} \in \mathcal{U}_{\epsilon}, \quad \text { then } \mathbb{P}^{</em>}\left(f\left(\tilde{\mathbf{u}}, \mathbf{x}^{*}\right) \leq 0\right) \geq 1-\epsilon \tag{2}$</p>
+<p>测试：</p>
+<p><script type="math/tex">\text { If } f\left(\mathbf{u}, \mathbf{x}^{*}\right) \leq 0 \forall \mathbf{u} \in \mathcal{U}_{\epsilon}, \quad \text { then } \mathbb{P}^{*}\left(f\left(\tilde{\mathbf{u}}, \mathbf{x}^{*}\right) \leq 0\right) \geq 1-\epsilon \tag{2}</script>.</p>
+<p>测试2：$\text { If } f\left(\mathbf{u}, \mathbf{x}^{<em>}\right) \leq 0 \forall \mathbf{u} \in \mathcal{U}_{\epsilon}, \quad \text { then } \mathbb{P}^{</em>}\left(f\left(\tilde{\mathbf{u} }, \mathbf{x}^{*}\right) \leq 0\right) \geq 1-\epsilon \tag{2}$。</p>
 
       
     </div>
