@@ -389,7 +389,7 @@
 </li>
 <li><p>打开terminal在Powershell中，输入如下命令：<code>wsl --set-default-version 2</code>，查看版本：<code>wsl -l -v</code>；输出的<code>VERSION</code>下面是2就成功了。</p>
 </li>
-<li><p>如果没有生效，需要安装wsl2：(<a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)；" target="_blank" rel="noopener">https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)；</a><br>安装后在terminal输入：<code>wsl --set-version Ubuntu-18.04 2</code>，然后继续输入命令将WSL 2设置为默认版本<code>wsl --set-default-version 2</code>，重新查看版本。</p>
+<li><p>如果没有生效，需要安装wsl2：<a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi" target="_blank" rel="noopener">wsl_update_x64</a><br>安装后在terminal输入：<code>wsl --set-version Ubuntu-18.04 2</code>，然后继续输入命令将WSL 2设置为默认版本<code>wsl --set-default-version 2</code>，重新查看版本。</p>
 </li>
 </ol>
 <a id="more"></a>
@@ -397,7 +397,7 @@
 <p>Next：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure></p>
 <p>要知道现在有两个系统：powershell和Ubuntu，所以要两个都要安装zsh。</p>
 <blockquote>
-<p>有很多教程，详细的可以自行搜索，像这个：<a href="https://zhuanlan.zhihu.com/p/273237897。" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/273237897。</a><br>或者试着搜索：<code>Windows10上开启WSL2(Windows Subsystem for Linux 2)</code>这类的就行</p>
+<p>有很多教程，详细的可以自行搜索，像这个：<a href="https://zhuanlan.zhihu.com/p/273237897" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/273237897</a><br>或者试着搜索：<code>Windows10上开启WSL2(Windows Subsystem for Linux 2)</code>这类的就行</p>
 </blockquote>
 <p>刚打开Ubuntu后，路径是在<code>mnt/c/Users/&lt;你的账号名&gt;</code>，我不知道怎么让它一打开就在<code>~</code>目录，所以每次都要自己cd过去。<br>不过文章里修改机器名称那里，即命令行前缀部分，适用于Ubuntu的方法不适合wsl，直接在设置部分修改自己的电脑名称即可，见：<a href="https://blog.csdn.net/lianghecai52171314/article/details/113064742" target="_blank" rel="noopener">https://blog.csdn.net/lianghecai52171314/article/details/113064742</a><br>另外美化后使用zsh会使pip3失效，所以需要：<code>sudo apt-get install --reinstall python3-pip</code>；再升级pip：<code>pip3 install --upgrade pip</code>；用<code>pip3 -V</code>查看版本。</p>
 <p>ok，美化结束。</p>
@@ -443,7 +443,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-12-08T15:00:18+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-12-08T15:06:59+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2021年12月8日</p>
@@ -472,7 +472,7 @@ Microsoft story下载Windows terminal和Ubuntu18.04 LTS
 
 打开terminal在Powershell中，输入如下命令：wsl --set-default-version 2，查看版本：wsl -l -v；输出的VERSION下面是2就成功了。
 
-如果没有生效，需要安装wsl2：(https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)；安装后在terminal输入：wsl --set-version Ubuntu-18.04 2，然后继续输入命令将WSL 2设置为默认版本wsl --set-default-version 2，重新查看版本。
+如果没有生效，需要安装wsl2：wsl_update_x64安装后在terminal输入：wsl --set-version Ubuntu-18.04 2，然后继续输入命令将WSL 2设置为默认版本wsl --set-default-version 2，重新查看版本。
 
 "
           
@@ -493,7 +493,7 @@ Microsoft story下载Windows terminal和Ubuntu18.04 LTS
 
 打开terminal在Powershell中，输入如下命令：wsl --set-default-version 2，查看版本：wsl -l -v；输出的VERSION下面是2就成功了。
 
-如果没有生效，需要安装wsl2：(https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)；安装后在terminal输入：wsl --set-version Ubuntu-18.04 2，然后继续输入命令将WSL 2设置为默认版本wsl --set-default-version 2，重新查看版本。
+如果没有生效，需要安装wsl2：wsl_update_x64安装后在terminal输入：wsl --set-version Ubuntu-18.04 2，然后继续输入命令将WSL 2设置为默认版本wsl --set-default-version 2，重新查看版本。
 
 "
           
@@ -514,7 +514,7 @@ Microsoft story下载Windows terminal和Ubuntu18.04 LTS
 
 打开terminal在Powershell中，输入如下命令：wsl --set-default-version 2，查看版本：wsl -l -v；输出的VERSION下面是2就成功了。
 
-如果没有生效，需要安装wsl2：(https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)；安装后在terminal输入：wsl --set-version Ubuntu-18.04 2，然后继续输入命令将WSL 2设置为默认版本wsl --set-default-version 2，重新查看版本。
+如果没有生效，需要安装wsl2：wsl_update_x64安装后在terminal输入：wsl --set-version Ubuntu-18.04 2，然后继续输入命令将WSL 2设置为默认版本wsl --set-default-version 2，重新查看版本。
 
 "
           
