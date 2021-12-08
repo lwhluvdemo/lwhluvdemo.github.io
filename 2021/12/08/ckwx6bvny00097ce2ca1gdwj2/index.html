@@ -402,23 +402,23 @@
 <p>刚打开Ubuntu后，路径是在<code>mnt/c/Users/&lt;你的账号名&gt;</code>，我不知道怎么让它一打开就在<code>~</code>目录，所以每次都要自己cd过去。<br>不过文章里修改机器名称那里，即命令行前缀部分，适用于Ubuntu的方法不适合wsl，直接在设置部分修改自己的电脑名称即可，见：<a href="https://blog.csdn.net/lianghecai52171314/article/details/113064742" target="_blank" rel="noopener">https://blog.csdn.net/lianghecai52171314/article/details/113064742</a><br>另外美化后使用zsh会使pip3失效，所以需要：<code>sudo apt-get install --reinstall python3-pip</code>；再升级pip：<code>pip3 install --upgrade pip</code>；用<code>pip3 -V</code>查看版本。</p>
 <p>ok，美化结束。</p>
 <h5 id="三-nvim前置环境"><a href="#三-nvim前置环境" class="headerlink" title="三. nvim前置环境"></a>三. nvim前置环境</h5><ol>
-<li><p><strong>安装管理nvim插件的插件：</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 https://github.com/wbthomason/packer.nvim\</span><br><span class="line"> ~/.<span class="built_in">local</span>/share/nvim/site/pack/packer/start/packer.nvim</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>安装node.js</strong><br>打开<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">nodejs中文网</a>里的下载 找到64位的文件（下面例子里的版本比较老，不要直接复制）<br>下载：<code>wget https://npm.taobao.org/mirrors/node/v12.14.1/node-v12.14.1-linux-x64.tar.xz</code>；<br>解压：<code>tar -xvf node-v12.14.1-linux-x64.tar.xz</code>；<br>移动：<code>sudo mv ./node-v16.13.1-linux-x64 /usr/local/node</code>；<br>接下来为node和npm创建快捷方式(软链接)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/<span class="built_in">local</span>/node/bin/node /usr/bin/node</span><br><span class="line">sudo ln -s /usr/<span class="built_in">local</span>/node/bin/npm /usr/bin/npm</span><br></pre></td></tr></table></figure>
-</li>
+<li><strong>安装管理nvim插件的插件：</strong></li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 https://github.com/wbthomason/packer.nvim\</span><br><span class="line"> ~/.<span class="built_in">local</span>/share/nvim/site/pack/packer/start/packer.nvim</span><br></pre></td></tr></table></figure>
+<ol>
+<li><strong>安装node.js</strong></li>
+</ol>
+<p>打开<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">nodejs中文网</a>里的下载 找到64位的文件（下面例子里的版本比较老，不要直接复制）<br>下载：<code>wget https://npm.taobao.org/mirrors/node/v12.14.1/node-v12.14.1-linux-x64.tar.xz</code>；<br>解压：<code>tar -xvf node-v12.14.1-linux-x64.tar.xz</code>；<br>移动：<code>sudo mv ./node-v16.13.1-linux-x64 /usr/local/node</code>；<br>接下来为node和npm创建快捷方式(软链接)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/<span class="built_in">local</span>/node/bin/node /usr/bin/node</span><br><span class="line">sudo ln -s /usr/<span class="built_in">local</span>/node/bin/npm /usr/bin/npm</span><br></pre></td></tr></table></figure></p>
 <p><code>node -v</code> 查看node版本号<br>安装cnmp：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">sudo ln -s /usr/local/node/bin/cnpm /usr/bin/cnpm</span><br></pre></td></tr></table></figure></p>
 <ol>
-<li><strong>C编译环境</strong>（没这个nvim的插件会出各种编译错误）<br>运行以下命令以检查是否安装了 GCC，<code>rpm -qa | grep gcc</code>,然后：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install yum-utils</span><br><span class="line">sudo apt-get install gcc</span><br></pre></td></tr></table></figure>
-</li>
+<li><strong>C编译环境</strong>（没这个nvim的插件会出各种编译错误）</li>
 </ol>
+<p>运行以下命令以检查是否安装了 GCC，<code>rpm -qa | grep gcc</code>,然后：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install yum-utils</span><br><span class="line">sudo apt-get install gcc</span><br></pre></td></tr></table></figure></p>
 <p>编译c环境：<code>sudo apt-get install build-essential</code>，如果失败尝试将 <code>/var/lib/apt/lists/</code> 中的内容全部移除：<code>sudo rm -r /var/lib/apt/lists/*</code>，再执行一次 <code>apt update</code>，再尝试安装所需软件包。如果还失败，就说明前面提供的阿里源已经过气了，你需要自己在阿里社区更换最新的源后再重复编译的操作。</p>
 <ol>
-<li><strong>关于ripgrep的安装</strong>（from：<a href="https://github.com/sharkdp/fd#on-ubuntu）" target="_blank" rel="noopener">https://github.com/sharkdp/fd#on-ubuntu）</a><br>If you use an older version of Ubuntu, you can download the latest .deb package from the <a href="https://github.com/sharkdp/fd/releases" target="_blank" rel="noopener">release page</a> and install it via:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i fd_8.3.0_amd64.deb  <span class="comment"># adapt version number and architecture</span></span><br></pre></td></tr></table></figure>
-</li>
+<li><strong>关于ripgrep的安装</strong> from：<a href="https://github.com/sharkdp/fd#on-ubuntu" target="_blank" rel="noopener">https://github.com/sharkdp/fd#on-ubuntu</a></li>
 </ol>
+<p>If you use an older version of Ubuntu, you can download the latest .deb package from the <a href="https://github.com/sharkdp/fd/releases" target="_blank" rel="noopener">release page</a> and install it via:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i fd_8.3.0_amd64.deb  <span class="comment"># adapt version number and architecture</span></span><br></pre></td></tr></table></figure></p>
 <h5 id="四-NvChad"><a href="#四-NvChad" class="headerlink" title="四. NvChad"></a>四. <a href="https://nvchad.github.io/getting-started/setup" target="_blank" rel="noopener">NvChad</a></h5><blockquote>
 <p>我这里还有一个关于插件安装的前置条件，那就是需要一点点魔法，要不然插件根本下载不下来。</p>
 </blockquote>
@@ -443,7 +443,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-12-08T15:06:59+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-12-08T15:11:20+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2021年12月8日</p>
