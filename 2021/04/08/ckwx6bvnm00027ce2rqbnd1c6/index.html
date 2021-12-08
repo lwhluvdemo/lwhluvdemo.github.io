@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>算法竞赛一些问题总结 | 水上书呀</title>
+  <title>YouComplete安装及报错解决 | 水上书呀</title>
   
   <meta name="keywords" content="数据分析 机器学习 交通运输">
   
@@ -14,38 +14,36 @@
 
   
 
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- meta -->
   
   
-  <meta name='theme-color' content='#FFFFFF'>
-  <meta name='msapplication-TileColor' content='#1BC3FB'>
-  <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#1BC3FB">
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
   
 
   <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
   
   
-  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico'>
-  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png'>
-  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png'>
-  <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg'>
-  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest'>
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
   
 
   
 
   
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/css/style.css">
   
 
   <script>
@@ -56,7 +54,7 @@
 
   
   
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 <body>
   
@@ -261,9 +259,9 @@
             </li>
           
             <li>
-							<a class="nav flat-box" target="_blank" href="https://xaoxuu.com/wiki/material-x/"
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/"
                 
-                  rel="nofollow noopener"
+                  rel="nofollow"
                 
                 
                 id="https:xaoxuu.comwikimaterial-x">
@@ -310,8 +308,8 @@
         
   
     <h1 class="title">
-      <a href="/2019/08/20/ckwj7hkt6000h5gudgwm6ee9i/">
-        算法竞赛一些问题总结
+      <a href="/2021/04/08/ckwx6bvnm00027ce2rqbnd1c6/">
+        YouComplete安装及报错解决
       </a>
     </h1>
   
@@ -340,7 +338,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-08-20</p>
+    <p>2021-04-08</p>
   </a>
 </div>
 
@@ -384,24 +382,24 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <h3 id="L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？"><a href="#L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？" class="headerlink" title="L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？"></a>L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？</h3><ul>
-<li>L1范数是对系数<code>绝对值之和的约束</code>。梯度会比较陡，通过求导可以知道，当某些特征作用不大的时候，会使得对应的系数为0，主要用于稀疏特征的约束，比如one-hot编码。</li>
-<li>L2范数是对系数<code>平方和的约束</code>，从而简化模型。梯度会比较缓，通过求导可以知道，系数很难达到0，因此L2范数不仅能够简化模型，也不会像L1范数一样，迫使模型忽略某些特征，一般来说，如果特征不是很稀疏，可以使用L2。</li>
-<li>L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态分布。从梯度来看，L2正则对数值大的参数惩罚大，对数值小的参数惩罚小，而L1对参数的惩罚恒定。于是L1容易把不太重要的特征的参数“惩罚”到0，从而产生稀疏的解。</li>
-</ul>
+          <p>租的华为云的服务器，倒腾了两天才成功。经过这个过程才发现，在国内按照官方教程根本不可能成功，翻了一圈相关blog，也都没起作用。</p>
 <a id="more"></a>
-<h3 id="比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？"><a href="#比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？" class="headerlink" title="比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？"></a>比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？</h3><p>​        首先要大致清楚模型能学到什么样的特征。</p>
-<p>​        然后当你做一个特征的时候，你要想清楚为什么这样尝试？为什么你认为这个特征有用，比如，以前的类似比赛用过类似的特征；通过对业务的理解进行推理出来的；通过数据观察(EDA)，发现该特征下，label的表现差异比较大（如果特征是随机数的时候，label理论上差异是最小的），一个具有良好依据的特征解释，是特征有效的根本。</p>
-<p>​        最直接有效的特征验证的方法就是代入模型验证，所以一个合理的验证策略变得极为重要。这里一定要留意的一个问题就是，要正确理解什么是“抖动”，抖动存在很多地方，一个随机种子，不同的列的顺序，行的顺序，线上线下数据集等。你所期望的结果，一般需要考虑以下数据集中自身存在的抖动收益。<br>最后就是比较重要的代码效率问题了。</p>
-<p>​        一个高效率的运行框架和调试方案。会大大加快你的想法的测试。【大约1min 验证一个特征】</p>
-<h3 id="数据探索-林有夕的分享"><a href="#数据探索-林有夕的分享" class="headerlink" title="数据探索-林有夕的分享"></a>数据探索-林有夕的分享</h3><p>数据探索主要通过一些统计指标来分析数据的分布。观察数据和结果的影响。</p>
-<p>例如观察数值特征的分布，均值，最值等，观察类别特征的频率分布等。以及一些交叉分布，比如平均每个用户看过的广告数之类的。</p>
-<p>一般数据探索有如下几个好处：</p>
-<ol>
-<li>让你更加了解数据的情况。验证是否符合自己所想的逻辑。</li>
-<li>通过观察特征和标签的分布关系。初步验证该特征是否和标签存在明显的关系。（表现在不同标签下，特征分布差异较大），在一些数据量比较大，模型迭代效率较低的场景下，可以通过该方法初步验证特征是否有意义。</li>
-<li>对于比赛后期，大家关于数据现实意义中有道理的特征和方案都尝试差不多的情况下，数据探索就尤其重要了。因为往往最后的提分点都是一些数据固有的特点，而非业务特点。（比如，通过观察你有可能会发现一些采样错误。一些异常数据点（比如地铁停运、极端天气等影响的label）等等。这些单纯靠猜业务是很难想到的。</li>
-</ol>
+<p>最初是用的Ubuntu18的版本，vim是8.0，安装ycm后会提示你不能启用：<code>YouCompleteMe unavailable: requires Vim 8.1.2269+</code>，网上唯一的解决方法是GitHub的讨论：<a href="https://github.com/ycm-core/YouCompleteMe/issues/3764" target="_blank" rel="noopener">YouCompleteMe unavailable: requires Vim 8.1.2269+</a>。</p>
+<p>非常可惜，多次尝试后依然没成功。</p>
+<p>不得已重装了 Ubuntu20，此后按照官网的前几步安装配置都没问题。</p>
+<p>最后出问题是在安装子模块上，当你运行<code>python3 ./install.py</code>时会提示这个命令：<code>git submodule update --init --recursive</code>，可惜在国内的网络环境下，成功的可能性基本为0。</p>
+<p>除了一堆GitHub的url，还有类似<code>go.googlesource.com</code>这样的地址，就？？？</p>
+<p>我把报错的网址大概记录了一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/PythonCharmers/python-future</span><br><span class="line">https://github.com/ross/requests-futures</span><br><span class="line">https://github.com/certifi/python-certifi</span><br><span class="line">https://github.com/chardet/chardet</span><br><span class="line">https://github.com/kjd/idna</span><br><span class="line">https://github.com/requests/requests</span><br><span class="line">https://github.com/urllib3/urllib3</span><br><span class="line">https://github.com/Valloric/ycmd</span><br><span class="line">https://go.googlesource.com/tools/ ---&gt; https://github.com/golang/tools</span><br><span class="line">https://github.com/davidhalter/jedi/</span><br></pre></td></tr></table></figure>
+<p>个人觉得唯一靠谱点的方法就是修改网址，类似这个博客：<a href="https://blog.csdn.net/weixin_44740860/article/details/105248387?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242" target="_blank" rel="noopener">从gitee中转安装</a>；或者这个：<a href="https://blog.csdn.net/m0_37604813/article/details/107130881" target="_blank" rel="noopener">修改GitHub后缀</a>，不过个人觉得需要修改的隐藏文件不止<code>.gitmodules</code>，还有<code>./.git/config</code>这个文件，可能还有其它需要修改的地方，比如下载tools这个模块所在的文件我就没找到。如果这样能成功的话最好不过。</p>
+<p>我就是那个又没成功的倒霉催的。</p>
+<p>给出我最后的解决方法：在vim交流群里找了个能成功用ycm的朋友，把他的YouComplete文件夹搬到我的<code>~/.vim/plugged</code>里(我用的是vim-plug管理插件)，好的，当然。。还没有万事大吉呀！别人的文件里插件的相关配置基本都已经改过了，所以会有很多不匹配的命令，这时候我们只需要把<code>plugin</code>和<code>autoload</code>文件夹里的vim文件替换成原始<code>master</code>里的文件，再运行<code>sudo python3 ./install.py --clang-completer</code>编译C就可以了（因为我搬的那个朋友有编译过，有clang文件，所以只能补上这个步骤，否则会报错）。</p>
+<p>这里把原始master的两个文件提取出来：第一个附件是<code>autoload</code>里的vim，第二个附件是<code>plugin</code>里的，替换原来的就好了。</p>
+<p><a href="https://www.yuque.com/attachments/yuque/0/2021/vim/12979166/1617860559406-7237471b-0339-4235-85e0-17f06b150922.vim" target="_blank" rel="noopener">📎youcompleteme.vim</a>，<a href="https://www.yuque.com/attachments/yuque/0/2021/vim/12979166/1617860509389-0f14f5d1-8772-4fa6-a309-15a32ac00a72.vim" target="_blank" rel="noopener">📎youcompleteme.vim</a></p>
+<p>over！</p>
+<p>补充：<code>.vimrc</code>配置文件里的插件管理那一条需要换个地址；例如我的运行：<code>PlugInstall</code>时会在ycm那里出现网址报错，所以我的配置改为报错给出的网址(可能是需要我匹配搬运的人家的ycm文件里的地址吧，反正找半天没找到)</p>
+<figure class="highlight plain"><figcaption><span>basic</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Plug &apos;https://git::@hub.fastgit.org/Valloric/YouCompleteMe.git&apos;,&#123;&apos;do&apos;:&apos;./install.py --tern-completer&apos;&#125;</span><br></pre></td></tr></table></figure>
+<p>如果有不懂的地方，欢迎随时交流！</p>
 
         </div>
         
@@ -413,10 +411,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-20T00:05:50+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-10T00:40:39+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年9月20日</p>
+    <p>最后更新于 2021年4月10日</p>
   </a>
 </div>
 
@@ -425,7 +423,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>机器学习</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>算法竞赛</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vim/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>vim</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/YouCompleteMe/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>YouCompleteMe</p></a></div>
 
 
         
@@ -436,13 +434,9 @@
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer noopener"
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lwhluvdemo.github.io/2019/08/20/ckwj7hkt6000h5gudgwm6ee9i/&title=算法竞赛一些问题总结 | 水上书呀&summary=L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？
-L1范数是对系数绝对值之和的约束。梯度会比较陡，通过求导可以知道，当某些特征作用不大的时候，会使得对应的系数为0，主要用于稀疏特征的约束，比如one-hot编码。
-L2范数是对系数平方和的约束，从而简化模型。梯度会比较缓，通过求导可以知道，系数很难达到0，因此L2范数不仅能够简化模型，也不会像L1范数一样，迫使模型忽略某些特征，一般来说，如果特征不是很稀疏，可以使用L2。
-L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态分布。从梯度来看，L2正则对数值大的参数惩罚大，对数值小的参数惩罚小，而L1对参数的惩罚恒定。于是L1容易把不太重要的特征的参数“惩罚”到0，从而产生稀疏的解。
-"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://lwhluvdemo.github.io/2021/04/08/ckwx6bvnm00027ce2rqbnd1c6/&title=YouComplete安装及报错解决 | 水上书呀&summary=租的华为云的服务器，倒腾了两天才成功。经过这个过程才发现，在国内按照官方教程根本不可能成功，翻了一圈相关blog，也都没起作用。"
           
           >
           
@@ -452,13 +446,9 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer noopener"
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lwhluvdemo.github.io/2019/08/20/ckwj7hkt6000h5gudgwm6ee9i/&title=算法竞赛一些问题总结 | 水上书呀&summary=L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？
-L1范数是对系数绝对值之和的约束。梯度会比较陡，通过求导可以知道，当某些特征作用不大的时候，会使得对应的系数为0，主要用于稀疏特征的约束，比如one-hot编码。
-L2范数是对系数平方和的约束，从而简化模型。梯度会比较缓，通过求导可以知道，系数很难达到0，因此L2范数不仅能够简化模型，也不会像L1范数一样，迫使模型忽略某些特征，一般来说，如果特征不是很稀疏，可以使用L2。
-L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态分布。从梯度来看，L2正则对数值大的参数惩罚大，对数值小的参数惩罚小，而L1对参数的惩罚恒定。于是L1容易把不太重要的特征的参数“惩罚”到0，从而产生稀疏的解。
-"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lwhluvdemo.github.io/2021/04/08/ckwx6bvnm00027ce2rqbnd1c6/&title=YouComplete安装及报错解决 | 水上书呀&summary=租的华为云的服务器，倒腾了两天才成功。经过这个过程才发现，在国内按照官方教程根本不可能成功，翻了一圈相关blog，也都没起作用。"
           
           >
           
@@ -468,13 +458,9 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer noopener"
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://lwhluvdemo.github.io/2019/08/20/ckwj7hkt6000h5gudgwm6ee9i/&title=算法竞赛一些问题总结 | 水上书呀&summary=L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？
-L1范数是对系数绝对值之和的约束。梯度会比较陡，通过求导可以知道，当某些特征作用不大的时候，会使得对应的系数为0，主要用于稀疏特征的约束，比如one-hot编码。
-L2范数是对系数平方和的约束，从而简化模型。梯度会比较缓，通过求导可以知道，系数很难达到0，因此L2范数不仅能够简化模型，也不会像L1范数一样，迫使模型忽略某些特征，一般来说，如果特征不是很稀疏，可以使用L2。
-L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态分布。从梯度来看，L2正则对数值大的参数惩罚大，对数值小的参数惩罚小，而L1对参数的惩罚恒定。于是L1容易把不太重要的特征的参数“惩罚”到0，从而产生稀疏的解。
-"
+          href="http://service.weibo.com/share/share.php?url=https://lwhluvdemo.github.io/2021/04/08/ckwx6bvnm00027ce2rqbnd1c6/&title=YouComplete安装及报错解决 | 水上书呀&summary=租的华为云的服务器，倒腾了两天才成功。经过这个过程才发现，在国内按照官方教程根本不可能成功，翻了一圈相关blog，也都没起作用。"
           
           >
           
@@ -502,16 +488,16 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/2019/08/22/ckwj7hksj00075gudcjsq5efs/" rel="prev" title="pyspark">
+                                <a href="/2021/04/09/ckwx6bvog000k7ce2d6imltes/" rel="prev" title="连接远程服务器使用git报错：Permission denied (publickey)">
                                   
-                                      pyspark
+                                      连接远程服务器使用git报错：Permission denied (publickey)
                                   
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/pyspark/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>pyspark</a>
+                                    <a class="tag" href="/tags/xshell/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>xshell</a> <a class="tag" href="/tags/Linux/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Linux</a>
                                 </h6>
                             
                         </span>
@@ -522,16 +508,16 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/08/15/ckwj7hkrx00005gud0ltresd4/" rel="prev" title="EDA笔记">
+                                <a href="/2019/10/19/ckwx6bvo0000a7ce2s0gwjfpy/" rel="prev" title="新手教程">
                                     
-                                        EDA笔记
+                                        新手教程
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/EDA/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>EDA</a> <a class="tag" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>机器学习</a>
+                                    <a class="tag" href="/tags/python/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>python</a> <a class="tag" href="/tags/协会新手教程/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>协会新手教程</a>
                                 </h6>
                             
                         </span>
@@ -574,7 +560,7 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
 
   <script>
     window.subData = {
-      title: '算法竞赛一些问题总结',
+      title: 'YouComplete安装及报错解决',
       tools: true
     }
   </script>
@@ -644,20 +630,6 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
           
           
             
-  <section class='widget toc-wrapper'>
-    
-<header class='pure'>
-  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
-  
-    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
-  
-</header>
-
-    <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#L1%E5%92%8CL2%E8%8C%83%E6%95%B0%E9%83%BD%E6%98%AF%E7%94%A8%E6%9D%A5%E9%81%BF%E5%85%8D%E8%BF%87%E6%8B%9F%E5%90%88%E9%97%AE%E9%A2%98%EF%BC%8C%E9%82%A3%E4%B9%88%E8%AF%B7%E9%97%AE%E5%9C%A8%E4%BD%BF%E7%94%A8%E7%9A%84%E6%97%B6%E5%80%99%E4%BA%8C%E8%80%85%E6%9C%89%E4%BD%95%E5%8C%BA%E5%88%AB%E5%91%A2%EF%BC%9F"><span class="toc-text">L1和L2范数都是用来避免过拟合问题，那么请问在使用的时候二者有何区别呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%B5%9B%E5%81%9A%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E6%98%AF%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%89%B9%E5%BE%81%E5%8A%A0%E8%BF%9B%E5%8E%BB%E8%AF%95%E8%AF%95%E6%AF%94%E8%BE%83%E5%A5%BD%EF%BC%8C%E8%BF%98%E6%98%AF%E5%85%88%E5%81%9A%E5%AE%8C%E4%B8%80%E5%A0%86%E7%89%B9%E5%BE%81%E7%84%B6%E5%90%8E%E5%86%8D%E6%8C%91%E6%AF%94%E8%BE%83%E5%A5%BD%EF%BC%9F"><span class="toc-text">比赛做特征工程是一个一个特征加进去试试比较好，还是先做完一堆特征然后再挑比较好？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2-%E6%9E%97%E6%9C%89%E5%A4%95%E7%9A%84%E5%88%86%E4%BA%AB"><span class="toc-text">数据探索-林有夕的分享</span></a></li></ol>
-    </div>
-  </section>
-
 
           
         
@@ -719,9 +691,9 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
           我的友链
         </a></li>
       
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" target="_blank" href="https://xaoxuu.com/wiki/material-x/"
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
           
-            rel="nofollow noopener"
+            rel="nofollow"
           
           
           id="https:xaoxuu.comwikimaterial-x">
@@ -779,7 +751,7 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
 </header>
 
     <div class='content pure'>
-      <a href="/tags/EDA/" style="font-size: 14px; color: #999">EDA</a> <a href="/tags/GitHub-Pages/" style="font-size: 14px; color: #999">GitHub Pages</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/YouCompleteMe/" style="font-size: 14px; color: #999">YouCompleteMe</a> <a href="/tags/bert/" style="font-size: 14px; color: #999">bert</a> <a href="/tags/keras/" style="font-size: 14px; color: #999">keras</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a> <a href="/tags/pyspark/" style="font-size: 14px; color: #999">pyspark</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/xshell/" style="font-size: 14px; color: #999">xshell</a> <a href="/tags/%E5%8D%8F%E4%BC%9A%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" style="font-size: 14px; color: #999">协会新手教程</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 14px; color: #999">工作</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">数据结构与算法</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">机器学习</a> <a href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" style="font-size: 14px; color: #999">算法竞赛</a>
+      <a href="/tags/EDA/" style="font-size: 14px; color: #999">EDA</a> <a href="/tags/GitHub-Pages/" style="font-size: 14px; color: #999">GitHub Pages</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/YouCompleteMe/" style="font-size: 14px; color: #999">YouCompleteMe</a> <a href="/tags/bert/" style="font-size: 14px; color: #999">bert</a> <a href="/tags/keras/" style="font-size: 14px; color: #999">keras</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a> <a href="/tags/pyspark/" style="font-size: 14px; color: #999">pyspark</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/xshell/" style="font-size: 14px; color: #999">xshell</a> <a href="/tags/协会新手教程/" style="font-size: 14px; color: #999">协会新手教程</a> <a href="/tags/工作/" style="font-size: 14px; color: #999">工作</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数据结构与算法/" style="font-size: 14px; color: #999">数据结构与算法</a> <a href="/tags/机器学习/" style="font-size: 24px; color: #555">机器学习</a> <a href="/tags/算法竞赛/" style="font-size: 14px; color: #999">算法竞赛</a>
     </div>
   </section>
 
@@ -880,7 +852,7 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
     </div>
   
   <br>
-  <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
   <div>
     本站使用
@@ -1004,14 +976,10 @@ L1正则假设参数符合拉普拉斯分布，L2正则假设参数符合正态�
 
 
 
-  
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/app.js"></script>
 
 
-
-  
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/search.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/search.js"></script>
 
 
 

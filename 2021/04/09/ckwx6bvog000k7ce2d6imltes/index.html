@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>pyspark | 水上书呀</title>
+  <title>连接远程服务器使用git报错：Permission denied (publickey) | 水上书呀</title>
   
   <meta name="keywords" content="数据分析 机器学习 交通运输">
   
@@ -14,38 +14,36 @@
 
   
 
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- meta -->
   
   
-  <meta name='theme-color' content='#FFFFFF'>
-  <meta name='msapplication-TileColor' content='#1BC3FB'>
-  <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#1BC3FB">
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
   
 
   <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
   
   
-  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico'>
-  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png'>
-  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png'>
-  <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg'>
-  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest'>
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
   
 
   
 
   
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/css/style.css">
   
 
   <script>
@@ -56,7 +54,7 @@
 
   
   
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 <body>
   
@@ -261,9 +259,9 @@
             </li>
           
             <li>
-							<a class="nav flat-box" target="_blank" href="https://xaoxuu.com/wiki/material-x/"
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/"
                 
-                  rel="nofollow noopener"
+                  rel="nofollow"
                 
                 
                 id="https:xaoxuu.comwikimaterial-x">
@@ -310,8 +308,8 @@
         
   
     <h1 class="title">
-      <a href="/2019/08/22/ckwj7hksj00075gudcjsq5efs/">
-        pyspark
+      <a href="/2021/04/09/ckwx6bvog000k7ce2d6imltes/">
+        连接远程服务器使用git报错：Permission denied (publickey)
       </a>
     </h1>
   
@@ -340,7 +338,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-08-22</p>
+    <p>2021-04-09</p>
   </a>
 </div>
 
@@ -384,15 +382,17 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf, SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.sql <span class="keyword">import</span> SparkSession,SQLContext,DataFrame,Row</span><br><span class="line">spark= SparkSession.builder.master(<span class="string">'local'</span>).appName(<span class="string">'test'</span>).getOrCreate()</span><br><span class="line">sc = spark.sparkContext</span><br><span class="line"></span><br><span class="line">lines = sc.textFile(<span class="string">"data.txt"</span>)</span><br></pre></td></tr></table></figure>
-<p>相关操作：<a href="https://www.jianshu.com/p/4cd22eda363f" target="_blank" rel="noopener">PySpark之RDD入门</a>.</p>
-<p>测试：</p>
-<script type="math/tex; mode=display">\text { If } f\left(\mathbf{u}, \mathbf{x}^{*}\right) \leq 0 \forall \mathbf{u} \in \mathcal{U}_{\epsilon}, \quad \text { then } \mathbb{P}^{*}\left(f\left(\tilde{\mathbf{u} }, \mathbf{x}^{*}\right) \leq 0\right) \geq 1-\epsilon \tag{2}</script><p>测试2：<script type="math/tex">\text { If } f\left(\mathbf{u}, \mathbf{x}^{*}\right) \leq 0 \forall \mathbf{u} \in \mathcal{U}_{\epsilon}, \quad \text { then } \mathbb{P}^{*}\left(f\left(\tilde{\mathbf{u} }, \mathbf{x}^{*}\right) \leq 0\right) \geq 1-\epsilon \tag{2}</script>.</p>
-<p>测试3：这是$x_y^t$的展示。</p>
-<p>version-02</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">  <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
+          <p>用xshell连的远程服务器，最近几天刚配置好vim，然后开始试着用git，然鹅配置好密钥后权限还是被拒绝了，网上搜索一番试了各种办法还是没有解决，包括什么从修改etc/ssh/sshd_config等等的，这里给出我的解决方法。</p>
+<a id="more"></a>
+<p>前期已经完成的工作说明一下：直接通过xshell在远程服务器上生成密钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">'任何随意的名称标记(英文数字等的最好)'</span> -f ~/.ssh/gitee_id_rsa</span><br><span class="line">//像这样</span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">'2xxxxxxx2@qq.com'</span> -f ~/.ssh/gitee_id_rsa</span><br></pre></td></tr></table></figure>
+<p>其中<code>-f</code>指示生成密钥的路径和名称，因为我这个密钥是用在gitee上的，所以加了gitee前缀。</p>
+<p>随后在 <code>~/.ssh</code> 目录下新建一个config文件，添加如下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># gitee</span></span><br><span class="line">Host gitee.com</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/gitee_id_rsa</span><br></pre></td></tr></table></figure>
+<p>最后用这个命令测试：<code>$ ssh -T git@gitee.com</code>，看到<code>Hi XXX! You&#39;ve successfully authenticated, but GITEE.COM does not provide shell access.</code>即代表成功。</p>
+<p>最后的最后，由于初次在服务器上使用git，你需要告诉它你是谁，直接运行下面的，会生成.gitconfig：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email <span class="string">"2482988299@qq.com"</span></span><br><span class="line">$ git config --global user.name <span class="string">"lwhluvdemo"</span></span><br></pre></td></tr></table></figure>
+<p>PS：这是我学习Linux的第5天，所以在远程服务器上像我这么使用密钥是否涉及安全问题暂不清楚，我使用的服务器仅用来学习和练手，不涉及运营！</p>
 
         </div>
         
@@ -404,10 +404,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-11-28T20:00:08+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-11-30T00:09:48+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2021年11月28日</p>
+    <p>最后更新于 2021年11月30日</p>
   </a>
 </div>
 
@@ -416,7 +416,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/pyspark/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>pyspark</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/xshell/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>xshell</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>Linux</p></a></div>
 
 
         
@@ -427,9 +427,9 @@
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer noopener"
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lwhluvdemo.github.io/2019/08/22/ckwj7hksj00075gudcjsq5efs/&title=pyspark | 水上书呀&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://lwhluvdemo.github.io/2021/04/09/ckwx6bvog000k7ce2d6imltes/&title=连接远程服务器使用git报错：Permission denied (publickey) | 水上书呀&summary=用xshell连的远程服务器，最近几天刚配置好vim，然后开始试着用git，然鹅配置好密钥后权限还是被拒绝了，网上搜索一番试了各种办法还是没有解决，包括什么从修改etc/ssh/sshd_config等等的，这里给出我的解决方法。"
           
           >
           
@@ -439,9 +439,9 @@
       
     
       
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer noopener"
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lwhluvdemo.github.io/2019/08/22/ckwj7hksj00075gudcjsq5efs/&title=pyspark | 水上书呀&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lwhluvdemo.github.io/2021/04/09/ckwx6bvog000k7ce2d6imltes/&title=连接远程服务器使用git报错：Permission denied (publickey) | 水上书呀&summary=用xshell连的远程服务器，最近几天刚配置好vim，然后开始试着用git，然鹅配置好密钥后权限还是被拒绝了，网上搜索一番试了各种办法还是没有解决，包括什么从修改etc/ssh/sshd_config等等的，这里给出我的解决方法。"
           
           >
           
@@ -451,9 +451,9 @@
       
     
       
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer noopener"
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://lwhluvdemo.github.io/2019/08/22/ckwj7hksj00075gudcjsq5efs/&title=pyspark | 水上书呀&summary="
+          href="http://service.weibo.com/share/share.php?url=https://lwhluvdemo.github.io/2021/04/09/ckwx6bvog000k7ce2d6imltes/&title=连接远程服务器使用git报错：Permission denied (publickey) | 水上书呀&summary=用xshell连的远程服务器，最近几天刚配置好vim，然后开始试着用git，然鹅配置好密钥后权限还是被拒绝了，网上搜索一番试了各种办法还是没有解决，包括什么从修改etc/ssh/sshd_config等等的，这里给出我的解决方法。"
           
           >
           
@@ -481,17 +481,12 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/2019/08/23/ckwj7hksl00095gudhk3n302q/" rel="prev" title="数据结构与算法">
+                                <a href="/2021/12/08/ckwx6bvny00097ce2ca1gdwj2/" rel="prev" title="win+wsl2+terminal+nvim(NvChad)教程">
                                   
-                                      数据结构与算法
+                                      win+wsl2+terminal+nvim(NvChad)教程
                                   
                                 </a>
                             </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数据结构</a>
-                                </h6>
                             
                         </span>
                     </section>
@@ -501,16 +496,16 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/08/20/ckwj7hkt6000h5gudgwm6ee9i/" rel="prev" title="算法竞赛一些问题总结">
+                                <a href="/2021/04/08/ckwx6bvnm00027ce2rqbnd1c6/" rel="prev" title="YouComplete安装及报错解决">
                                     
-                                        算法竞赛一些问题总结
+                                        YouComplete安装及报错解决
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>机器学习</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>算法竞赛</a>
+                                    <a class="tag" href="/tags/vim/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>vim</a> <a class="tag" href="/tags/YouCompleteMe/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>YouCompleteMe</a>
                                 </h6>
                             
                         </span>
@@ -553,7 +548,7 @@
 
   <script>
     window.subData = {
-      title: 'pyspark',
+      title: '连接远程服务器使用git报错：Permission denied (publickey)',
       tools: true
     }
   </script>
@@ -684,9 +679,9 @@
           我的友链
         </a></li>
       
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" target="_blank" href="https://xaoxuu.com/wiki/material-x/"
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
           
-            rel="nofollow noopener"
+            rel="nofollow"
           
           
           id="https:xaoxuu.comwikimaterial-x">
@@ -744,7 +739,7 @@
 </header>
 
     <div class='content pure'>
-      <a href="/tags/EDA/" style="font-size: 14px; color: #999">EDA</a> <a href="/tags/GitHub-Pages/" style="font-size: 14px; color: #999">GitHub Pages</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/YouCompleteMe/" style="font-size: 14px; color: #999">YouCompleteMe</a> <a href="/tags/bert/" style="font-size: 14px; color: #999">bert</a> <a href="/tags/keras/" style="font-size: 14px; color: #999">keras</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a> <a href="/tags/pyspark/" style="font-size: 14px; color: #999">pyspark</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/xshell/" style="font-size: 14px; color: #999">xshell</a> <a href="/tags/%E5%8D%8F%E4%BC%9A%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" style="font-size: 14px; color: #999">协会新手教程</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 14px; color: #999">工作</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">数据结构与算法</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">机器学习</a> <a href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" style="font-size: 14px; color: #999">算法竞赛</a>
+      <a href="/tags/EDA/" style="font-size: 14px; color: #999">EDA</a> <a href="/tags/GitHub-Pages/" style="font-size: 14px; color: #999">GitHub Pages</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/YouCompleteMe/" style="font-size: 14px; color: #999">YouCompleteMe</a> <a href="/tags/bert/" style="font-size: 14px; color: #999">bert</a> <a href="/tags/keras/" style="font-size: 14px; color: #999">keras</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a> <a href="/tags/pyspark/" style="font-size: 14px; color: #999">pyspark</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/xshell/" style="font-size: 14px; color: #999">xshell</a> <a href="/tags/协会新手教程/" style="font-size: 14px; color: #999">协会新手教程</a> <a href="/tags/工作/" style="font-size: 14px; color: #999">工作</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数据结构与算法/" style="font-size: 14px; color: #999">数据结构与算法</a> <a href="/tags/机器学习/" style="font-size: 24px; color: #555">机器学习</a> <a href="/tags/算法竞赛/" style="font-size: 14px; color: #999">算法竞赛</a>
     </div>
   </section>
 
@@ -845,7 +840,7 @@
     </div>
   
   <br>
-  <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
   <div>
     本站使用
@@ -969,14 +964,10 @@
 
 
 
-  
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/app.js"></script>
 
 
-
-  
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/search.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/search.js"></script>
 
 
 
