@@ -326,6 +326,8 @@
         
           
         
+          
+        
       
     
     
@@ -343,7 +345,97 @@
       
         
   <h2 class="title">
-    <a href="/2021/12/08/ckwx6bvny00097ce2ca1gdwj2/">
+    <a href="/2021/12/12/ckx3e5iv30007nce2im6u169q/">
+      修改wsl下绿色背景的文件夹颜色
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://lwhluvdemo.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>lwhluvdemo</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2021-12-12</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h5 id="修改使用ls时文件夹绿色底色的问题："><a href="#修改使用ls时文件夹绿色底色的问题：" class="headerlink" title="修改使用ls时文件夹绿色底色的问题："></a>修改使用ls时文件夹绿色底色的问题：</h5><p>个人使用的是zsh终端<br>使用<code>ls</code>命令查看时有某种权限的文件夹会显示非常别眼的绿色，像下面的blog这样<br><img src="https://lwh-graph-bed.oss-cn-hangzhou.aliyuncs.com/pic/492495522211253.png" alt="例子"></p>
+<p><strong>修改：</strong><br>使用命令：<code>dircolors -p &gt; ~/.dircolors</code>生成配置文件，用vim打开并修改<code>OTHER_WRITABLE</code>部分。<br>修改为：<code>OTHER_WRITABLE 30;46</code>，保存退出。（当然你也可以选择自己喜欢的颜色）<br>在终端运行以下命令生效：<code>eval &quot;$(dircolors ~/.dircolors)&quot;;</code>。</p>
+<p>参考于StackOverflow的这个问题：<a href="https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output" target="_blank" rel="noopener">https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output</a></p>
+<blockquote>
+<p>ps：需要注意的是，如果改变了配色主题：<code>~/.oh-my-zsh/themes</code>下的主题在<code>~/.zshrc</code>中改变，<br>要删除<code>.dircolors</code>文件并重复上面的步骤。</p>
+</blockquote>
+<p>最后的效果图是这样（我选择的主题是<code>fletcherm</code>，另外<code>dpoggi</code>也不错）<br><img src="https://lwh-graph-bed.oss-cn-hangzhou.aliyuncs.com/pic/467961423229679.png" alt="例子"></p>
+
+      
+    </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2021/12/08/ckx3e5iv50009nce2v1y82cc3/">
       win+wsl2+terminal+nvim(NvChad)教程
     </a>
   </h2>
@@ -415,7 +507,7 @@
 </ol>
       
         <div class="readmore">
-          <a href="/2021/12/08/ckwx6bvny00097ce2ca1gdwj2/" class="flat-box">
+          <a href="/2021/12/08/ckx3e5iv50009nce2v1y82cc3/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -442,7 +534,7 @@
       
         
   <h2 class="title">
-    <a href="/2021/04/09/ckwx6bvog000k7ce2d6imltes/">
+    <a href="/2021/04/09/ckx3e5ivj000knce2ry5b2pg6/">
       连接远程服务器使用git报错：Permission denied (publickey)
     </a>
   </h2>
@@ -505,7 +597,7 @@
       <p>用xshell连的远程服务器，最近几天刚配置好vim，然后开始试着用git，然鹅配置好密钥后权限还是被拒绝了，网上搜索一番试了各种办法还是没有解决，包括什么从修改etc/ssh/sshd_config等等的，这里给出我的解决方法。</p>
       
         <div class="readmore">
-          <a href="/2021/04/09/ckwx6bvog000k7ce2d6imltes/" class="flat-box">
+          <a href="/2021/04/09/ckx3e5ivj000knce2ry5b2pg6/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -540,7 +632,7 @@
       
         
   <h2 class="title">
-    <a href="/2021/04/08/ckwx6bvnm00027ce2rqbnd1c6/">
+    <a href="/2021/04/08/ckx3e5iuu0002nce26gtem8t9/">
       YouComplete安装及报错解决
     </a>
   </h2>
@@ -603,7 +695,7 @@
       <p>租的华为云的服务器，倒腾了两天才成功。经过这个过程才发现，在国内按照官方教程根本不可能成功，翻了一圈相关blog，也都没起作用。</p>
       
         <div class="readmore">
-          <a href="/2021/04/08/ckwx6bvnm00027ce2rqbnd1c6/" class="flat-box">
+          <a href="/2021/04/08/ckx3e5iuu0002nce26gtem8t9/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -638,7 +730,7 @@
       
         
   <h2 class="title">
-    <a href="/2019/10/19/ckwx6bvo0000a7ce2s0gwjfpy/">
+    <a href="/2019/10/19/ckx3e5iva000cnce2thpicr2z/">
       新手教程
     </a>
   </h2>
@@ -707,7 +799,7 @@
 </blockquote>
       
         <div class="readmore">
-          <a href="/2019/10/19/ckwx6bvo0000a7ce2s0gwjfpy/" class="flat-box">
+          <a href="/2019/10/19/ckx3e5iva000cnce2thpicr2z/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -742,7 +834,7 @@
       
         
   <h2 class="title">
-    <a href="/2019/10/02/ckwx6bvod000h7ce2mulq3icm/">
+    <a href="/2019/10/02/ckx3e5ivc000ence27hvfpl2c/">
       闲聊
     </a>
   </h2>
@@ -809,7 +901,7 @@
 </ol>
       
         <div class="readmore">
-          <a href="/2019/10/02/ckwx6bvod000h7ce2mulq3icm/" class="flat-box">
+          <a href="/2019/10/02/ckx3e5ivc000ence27hvfpl2c/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -842,7 +934,7 @@
       
         
   <h2 class="title">
-    <a href="/2019/09/19/ckwx6bvpe001c7ce2elonz5l8/">
+    <a href="/2019/09/19/ckx3e5iwg001dnce2okbnecdu/">
       双指针
     </a>
   </h2>
@@ -908,7 +1000,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定数组 nums = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>], </span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 <span class="number">2</span>, 并且原数组 nums 的前两个元素被修改为 <span class="number">1</span>, <span class="number">2</span>。 </span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
       
         <div class="readmore">
-          <a href="/2019/09/19/ckwx6bvpe001c7ce2elonz5l8/" class="flat-box">
+          <a href="/2019/09/19/ckx3e5iwg001dnce2okbnecdu/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -941,7 +1033,7 @@
       
         
   <h2 class="title">
-    <a href="/2019/09/12/ckwx6bvoa000e7ce23b5o9tqw/">
+    <a href="/2019/09/12/ckx3e5ivh000ince2mbz6rdmb/">
       2019-09-12
     </a>
   </h2>
@@ -1030,7 +1122,7 @@
       
         
   <h2 class="title">
-    <a href="/2019/09/05/ckwx6bvnv00067ce227kn31mv/">
+    <a href="/2019/09/05/ckx3e5iv00005nce28wdgk6mp/">
       pandas技巧
     </a>
   </h2>
@@ -1093,7 +1185,7 @@
       <h4 id="用一列的非空值填充另一列对应行的空值"><a href="#用一列的非空值填充另一列对应行的空值" class="headerlink" title="用一列的非空值填充另一列对应行的空值"></a>用一列的非空值填充另一列对应行的空值</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 利用数据框df的name列中的非空值，去填充df的features_1列中对应的NaN。</span></span><br><span class="line">df.loc[df[<span class="string">'features_1'</span>].isnull(),<span class="string">'features_1'</span>]=df[df[<span class="string">'features_1'</span>].isnull()][‘name’]</span><br></pre></td></tr></table></figure>
       
         <div class="readmore">
-          <a href="/2019/09/05/ckwx6bvnv00067ce227kn31mv/" class="flat-box">
+          <a href="/2019/09/05/ckx3e5iv00005nce28wdgk6mp/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -1128,7 +1220,7 @@
       
         
   <h2 class="title">
-    <a href="/2019/08/29/ckwx6bvnt00057ce2mkdpnp6y/">
+    <a href="/2019/08/29/ckx3e5iv20006nce26zco643k/">
       keras_bert
     </a>
   </h2>
@@ -1192,7 +1284,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 会下载Bert模型</span></span><br><span class="line">!pip install -q keras-bert keras-rectified-adam</span><br><span class="line">!wget -q https://storage.googleapis.com/bert_models/<span class="number">2018</span>_10_18/uncased_L<span class="number">-12</span>_H<span class="number">-768</span>_A<span class="number">-12.</span>zip</span><br><span class="line"><span class="comment"># !wget -q https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip    # 中文</span></span><br><span class="line">!unzip -o uncased_L<span class="number">-12</span>_H<span class="number">-768</span>_A<span class="number">-12.</span>zip</span><br></pre></td></tr></table></figure>
       
         <div class="readmore">
-          <a href="/2019/08/29/ckwx6bvnt00057ce2mkdpnp6y/" class="flat-box">
+          <a href="/2019/08/29/ckx3e5iv20006nce26zco643k/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -1205,103 +1297,6 @@
           <a href="/tags/keras/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>keras</a>
         
           <a href="/tags/bert/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>bert</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/2019/08/23/ckwx6bvo5000c7ce2mc4b3mo7/">
-      数据结构与算法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://lwhluvdemo.github.io" rel="nofollow">
-      
-        <i class="fas fa-user" aria-hidden="true"></i>
-      
-      <p>lwhluvdemo</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-08-23</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h4 id="大O"><a href="#大O" class="headerlink" title="大O"></a>大O</h4><p>大O表示法中的常量有时候事关重大，这就是快速排序比合并排序快的原因所在。 </p>
-<p>比较简单查找和二分查找时，常量几乎无关紧要，因为列表很长时， O(log n)的速度比O(n)<br>快得多。 </p>
-<h4 id="散列函数"><a href="#散列函数" class="headerlink" title="散列函数"></a>散列函数</h4><p>“将输入映射到数字”。 </p>
-<ul>
-<li>模拟映射关系；</li>
-<li>防止重复；</li>
-<li>缓存/记住数据，以免服务器再通过处理来生成它们。 </li>
-</ul>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/数据结构/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>数据结构</a>
         
       </div>
     

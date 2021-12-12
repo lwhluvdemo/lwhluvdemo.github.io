@@ -301,6 +301,8 @@
         
           
         
+          
+        
       
     
     
@@ -318,7 +320,97 @@
       
         
   <h2 class="title">
-    <a href="/2021/12/08/ckwx6bvny00097ce2ca1gdwj2/">
+    <a href="/2021/12/12/ckx3e5iv30007nce2im6u169q/">
+      修改wsl下绿色背景的文件夹颜色
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://lwhluvdemo.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>lwhluvdemo</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2021-12-12</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h5 id="修改使用ls时文件夹绿色底色的问题："><a href="#修改使用ls时文件夹绿色底色的问题：" class="headerlink" title="修改使用ls时文件夹绿色底色的问题："></a>修改使用ls时文件夹绿色底色的问题：</h5><p>个人使用的是zsh终端<br>使用<code>ls</code>命令查看时有某种权限的文件夹会显示非常别眼的绿色，像下面的blog这样<br><img src="https://lwh-graph-bed.oss-cn-hangzhou.aliyuncs.com/pic/492495522211253.png" alt="例子"></p>
+<p><strong>修改：</strong><br>使用命令：<code>dircolors -p &gt; ~/.dircolors</code>生成配置文件，用vim打开并修改<code>OTHER_WRITABLE</code>部分。<br>修改为：<code>OTHER_WRITABLE 30;46</code>，保存退出。（当然你也可以选择自己喜欢的颜色）<br>在终端运行以下命令生效：<code>eval &quot;$(dircolors ~/.dircolors)&quot;;</code>。</p>
+<p>参考于StackOverflow的这个问题：<a href="https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output" target="_blank" rel="noopener">https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output</a></p>
+<blockquote>
+<p>ps：需要注意的是，如果改变了配色主题：<code>~/.oh-my-zsh/themes</code>下的主题在<code>~/.zshrc</code>中改变，<br>要删除<code>.dircolors</code>文件并重复上面的步骤。</p>
+</blockquote>
+<p>最后的效果图是这样（我选择的主题是<code>fletcherm</code>，另外<code>dpoggi</code>也不错）<br><img src="https://lwh-graph-bed.oss-cn-hangzhou.aliyuncs.com/pic/467961423229679.png" alt="例子"></p>
+
+      
+    </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2021/12/08/ckx3e5iv50009nce2v1y82cc3/">
       win+wsl2+terminal+nvim(NvChad)教程
     </a>
   </h2>
@@ -390,7 +482,7 @@
 </ol>
       
         <div class="readmore">
-          <a href="/2021/12/08/ckwx6bvny00097ce2ca1gdwj2/" class="flat-box">
+          <a href="/2021/12/08/ckx3e5iv50009nce2v1y82cc3/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
